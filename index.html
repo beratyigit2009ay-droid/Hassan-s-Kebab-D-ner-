@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="de" class="no-js is-loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hasan's Döner · Pizza · Kebab – Pom Döner in Bad Schussenried</title>
+  <meta name="description" content="Hasan's Döner-Pizza-Kebab in Bad Schussenried: Pom Döner (Döner mit Pommes drin), Döner Kebab, Döner Box, Döner Teller und Döner Pizza.">
+  <meta name="theme-color" content="#0e0a07">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Hasan's – Pom Döner in Bad Schussenried">
+  <meta property="og:description" content="Döner mit Pommes drin. Knusprig, saftig, frisch vom Spieß.">
+  <meta property="og:image" content="assets/img/og-pom-doener.jpg">
+
+  <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/pom-doener.webp"
+        imagesrcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w"
+        imagesizes="(min-width: 900px) 40vw, 90vw">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Hasan's Döner-Pizza-Kebab",
+    "servesCuisine": ["Döner", "Kebab", "Pizza", "Türkisch"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bad Schussenried",
+      "addressCountry": "DE"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Wiederverwendbare Grafiken -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-fry" x1="0" x2="1">
+        <stop offset="0" stop-color="#e99d12"/>
+        <stop offset=".45" stop-color="#ffd84f"/>
+        <stop offset="1" stop-color="#dc8f0c"/>
+      </linearGradient>
+      <linearGradient id="g-bread" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f3bd6a"/>
+        <stop offset="1" stop-color="#c47a35"/>
+      </linearGradient>
+      <linearGradient id="g-spit-shade" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".6"/>
+        <stop offset=".3" stop-color="#000" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#fff" stop-opacity=".16"/>
+        <stop offset=".72" stop-color="#000" stop-opacity="0"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".65"/>
+      </linearGradient>
+      <clipPath id="clip-spit">
+        <path d="M28 64q72-22 144 0l-24 230q-48 16-96 0z"/>
+      </clipPath>
+      <pattern id="p-spit" width="60" height="10" patternUnits="userSpaceOnUse">
+        <rect width="22" height="10" fill="#9b4f24"/>
+        <rect x="22" width="12" height="10" fill="#743617"/>
+        <rect x="34" width="18" height="10" fill="#b8672f"/>
+        <rect x="52" width="8" height="10" fill="#652f13"/>
+      </pattern>
+    </defs>
+    <symbol id="i-fry" viewBox="0 0 24 120">
+      <rect x="2" y="2" width="20" height="116" rx="6" fill="url(#g-fry)"/>
+      <rect x="7" y="10" width="3.5" height="92" rx="1.75" fill="#fff5c4" opacity=".6"/>
+      <path d="M2 106c6 6 14 6 20 0v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6z" fill="#b8690a" opacity=".5"/>
+    </symbol>
+    <symbol id="i-corn" viewBox="0 0 30 30">
+      <path d="M15 2c9 0 13 8 12 15-1 8-7 11-12 11S4 25 3 17C2 10 6 2 15 2z" fill="#ffcd2e"/>
+      <ellipse cx="11" cy="10" rx="4" ry="3" fill="#fff3b5" opacity=".7"/>
+    </symbol>
+    <symbol id="i-drop" viewBox="0 0 30 34">
+      <path d="M15 1S3 16 3 22a12 12 0 0 0 24 0C27 16 15 1 15 1z" fill="#ff3d1f"/>
+      <ellipse cx="10" cy="22" rx="3" ry="5" fill="#fff" opacity=".35"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-spit" viewBox="0 0 200 360">
+      <rect x="96" y="6" width="8" height="346" rx="4" fill="#d6cdc2"/>
+      <circle cx="100" cy="12" r="10" fill="#efe7dc"/>
+      <g clip-path="url(#clip-spit)">
+        <g class="spit__bands">
+          <rect x="-120" y="40" width="440" height="270" fill="url(#p-spit)"/>
+        </g>
+        <path d="M30 95q70-14 140 0M34 130q66-13 132 0M38 165q62-12 124 0M42 200q58-11 116 0M46 235q54-10 108 0M50 270q50-9 100 0" stroke="#4a210c" stroke-width="2.5" fill="none" opacity=".3"/>
+        <rect x="0" y="40" width="200" height="270" fill="url(#g-spit-shade)"/>
+      </g>
+      <ellipse cx="100" cy="64" rx="72" ry="13" fill="#c2733a"/>
+      <ellipse cx="100" cy="62" rx="60" ry="8" fill="#d98c4c" opacity=".6"/>
+      <rect x="74" y="330" width="52" height="14" rx="5" fill="#8f857b"/>
+    </symbol>
+  </svg>
+
+  <!-- Intro-Loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__panel loader__panel--back"></div>
+    <div class="loader__panel loader__panel--front">
+      <div class="loader__inner">
+        <svg class="loader__spit"><use href="#i-spit"/></svg>
+        <div class="loader__word">HASAN'S</div>
+        <div class="loader__count"><span data-count>0</span>%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label"></span></div>
+  </div>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="Hasan's – zum Seitenanfang">
+      <svg class="nav__spit" aria-hidden="true"><use href="#i-spit"/></svg>
+      <span>HASAN'S</span>
+    </a>
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="#pom-doener">Pom Döner</a>
+      <a href="#menu">Menü</a>
+      <a href="#getraenke">Getränke</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#besuch">Besuch</a>
+    </nav>
+    <a class="btn btn--small btn--primary nav__cta magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=Hasan%27s+D%C3%B6ner+Pizza+Kebab+Bad+Schussenried" target="_blank" rel="noopener">Route ↗</a>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" inert>
+    <nav aria-label="Mobile Navigation">
+      <a href="#pom-doener" style="--i:0">Pom Döner</a>
+      <a href="#menu" style="--i:1">Menü</a>
+      <a href="#getraenke" style="--i:2">Getränke</a>
+      <a href="#galerie" style="--i:3">Galerie</a>
+      <a href="#besuch" style="--i:4">Besuch</a>
+    </nav>
+    <p class="mobile-menu__foot">Bad Schussenried</p>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow" data-hero style="--d:0">
+          <span class="pulse"></span> Hasan's Döner · Pizza · Kebab — Bad Schussenried
+        </p>
+        <h1 class="hero__title" id="hero-title" aria-label="Pom Döner">
+          <span class="line line--fry" aria-hidden="true"><span data-split>POM</span></span>
+          <span class="line" aria-hidden="true"><span data-split>DÖNER</span></span>
+          <span class="sticker" aria-hidden="true">mit Pommes drin!</span>
+        </h1>
+        <p class="hero__lead" data-hero style="--d:1">
+          Saftiges Döner-Fleisch vom Spieß, frischer Salat, Soße –
+          und knusprige Pommes direkt mit rein. Das ist unsere Hausspezialität.
+        </p>
+        <div class="hero__actions" data-hero style="--d:2">
+          <a class="btn btn--primary magnetic" href="#menu">Menü entdecken</a>
+          <a class="btn btn--ghost magnetic" href="#pom-doener">Was ist Pom Döner?</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <figure class="hero__frame">
+          <img src="assets/img/pom-doener.webp"
+               srcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w"
+               sizes="(min-width: 900px) 40vw, 90vw"
+               width="1200" height="1600"
+               alt="Pom Döner: Döner im Fladenbrot mit Salat, Mais, Schafskäse, Soße und knusprigen Pommes, daneben eine Dose Orangenlimo"
+               fetchpriority="high">
+        </figure>
+
+        <div class="badge" aria-hidden="true">
+          <svg class="badge__ring" viewBox="0 0 200 200">
+            <defs><path id="badge-circle" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+            <text><textPath href="#badge-circle" textLength="474" lengthAdjust="spacing">HAUSSPEZIALITÄT ✦ POM DÖNER ✦ </textPath></text>
+          </svg>
+          <svg class="badge__fry"><use href="#i-fry"/></svg>
+        </div>
+
+        <div class="floaters" aria-hidden="true">
+          <span class="floater" style="--x:-6%;--y:8%;--depth:1.2"><svg class="fl fl--fry" style="--r:-28deg;--dur:6.5s"><use href="#i-fry"/></svg></span>
+          <span class="floater" style="--x:88%;--y:2%;--depth:.7"><svg class="fl fl--fry" style="--r:22deg;--dur:7.5s;--s:.8"><use href="#i-fry"/></svg></span>
+          <span class="floater" style="--x:94%;--y:62%;--depth:1.5"><svg class="fl fl--fry" style="--r:-12deg;--dur:8s;--s:1.1"><use href="#i-fry"/></svg></span>
+          <span class="floater" style="--x:-4%;--y:70%;--depth:.9"><svg class="fl fl--corn" style="--r:10deg;--dur:5s"><use href="#i-corn"/></svg></span>
+          <span class="floater" style="--x:10%;--y:92%;--depth:1.3"><svg class="fl fl--drop" style="--r:-8deg;--dur:6s"><use href="#i-drop"/></svg></span>
+          <span class="floater" style="--x:80%;--y:92%;--depth:.8"><svg class="fl fl--corn" style="--r:-30deg;--dur:5.5s;--s:.8"><use href="#i-corn"/></svg></span>
+          <span class="floater" style="--x:48%;--y:-6%;--depth:1"><svg class="fl fl--drop" style="--r:14deg;--dur:7s;--s:.7"><use href="#i-drop"/></svg></span>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#pom-doener" aria-label="Weiter scrollen">
+        <span>Scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee marquee--sauce">
+        <div class="marquee__track" data-dir="-1">
+          <div class="marquee__group">
+            <span>POM DÖNER</span><svg><use href="#i-spark"/></svg>
+            <span>DÖNER KEBAB</span><svg><use href="#i-spark"/></svg>
+            <span>DÖNER BOX</span><svg><use href="#i-spark"/></svg>
+            <span>DÖNER TELLER</span><svg><use href="#i-spark"/></svg>
+            <span>DÖNER PIZZA</span><svg><use href="#i-spark"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="marquee marquee--fry">
+        <div class="marquee__track" data-dir="1">
+          <div class="marquee__group">
+            <span>KNUSPRIG</span><svg><use href="#i-spark"/></svg>
+            <span>SAFTIG</span><svg><use href="#i-spark"/></svg>
+            <span>FRISCH VOM SPIESS</span><svg><use href="#i-spark"/></svg>
+            <span>POMMES REIN</span><svg><use href="#i-spark"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POM DÖNER BAUKASTEN -->
+    <section class="build" id="pom-doener" aria-labelledby="build-title">
+      <div class="build__sticky">
+        <div class="build__stage" aria-hidden="true">
+          <div class="build__glow"></div>
+          <svg class="build__svg" viewBox="0 0 420 470">
+            <ellipse class="build__shadow" cx="210" cy="438" rx="176" ry="14"/>
+
+            <!-- 1: Brot unten -->
+            <g class="layer" data-layer="0">
+              <path d="M36 356q0 62 174 64 174-2 174-64z" fill="#c9843d"/>
+              <path d="M36 356q0 30 174 34 174-4 174-34" fill="none" stroke="#a9682a" stroke-width="3" opacity=".6"/>
+              <path d="M32 356q178-30 356 0 0 16-178 18-178-2-178-18z" fill="#f4d29a"/>
+              <g fill="#e7b872" opacity=".8">
+                <circle cx="96" cy="358" r="3"/><circle cx="170" cy="364" r="2.5"/><circle cx="260" cy="360" r="3"/><circle cx="320" cy="358" r="2.5"/>
+              </g>
+            </g>
+
+            <!-- 2: Döner-Fleisch -->
+            <g class="layer" data-layer="1">
+              <path d="M40 350c30-30 58 2 88-22s62 18 92-6 64 20 94-2 50 10 70 0l-2 34q-172 22-344 0z" fill="#6f3417"/>
+              <path d="M48 338c32-24 60 4 90-18s58 16 88-6 62 18 92-4c24-14 42 6 54-2" stroke="#a9592a" stroke-width="12" fill="none" stroke-linecap="round"/>
+              <path d="M58 350c35-16 65 4 100-12s70 12 105-4 65 10 102-2" stroke="#4f230d" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M76 326c20-10 34-2 48-10M190 322c18-10 30 0 46-8M300 318c14-8 26-2 38-8" stroke="#d98e52" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- 3: Salat, Tomaten, Mais, Schafskäse -->
+            <g class="layer" data-layer="2">
+              <path d="M28 318q10-28 26-10 12-24 28-6 14-22 28-4 14-22 28-4 14-20 28-2 14-20 28-2 14-20 28-2 14-20 28-2 14-20 28-2 14-22 28-2 14-20 28 0 14-20 30 4 16-16 28 14-182 22-362 0z" fill="#5fbf55"/>
+              <path d="M60 312l14-8M118 306l12-10M180 304l12-9M246 304l12-9M306 306l12-9M350 310l10-8" stroke="#3b8f3f" stroke-width="3" stroke-linecap="round"/>
+              <path d="M84 310q18-18 38 0M226 306q16-16 34 0M300 312q14-14 30 0" stroke="#a8336f" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <g>
+                <circle cx="124" cy="298" r="18" fill="#e23b28"/><circle cx="124" cy="298" r="13" fill="#f25d43"/>
+                <path d="M124 288v20M114 298h20" stroke="#ffb09b" stroke-width="2" opacity=".6"/>
+                <circle cx="282" cy="296" r="17" fill="#e23b28"/><circle cx="282" cy="296" r="12" fill="#f25d43"/>
+                <path d="M282 287v18M273 296h18" stroke="#ffb09b" stroke-width="2" opacity=".6"/>
+              </g>
+              <g fill="#ffd02f" stroke="#e6a800" stroke-width="1.5">
+                <circle cx="78" cy="296" r="6"/><circle cx="94" cy="304" r="6"/><circle cx="168" cy="290" r="6"/><circle cx="184" cy="299" r="6"/>
+                <circle cx="206" cy="288" r="6"/><circle cx="234" cy="297" r="6"/><circle cx="330" cy="292" r="6"/><circle cx="346" cy="300" r="6"/><circle cx="152" cy="303" r="6"/>
+              </g>
+              <g fill="#fffaf0">
+                <rect x="52" y="296" width="11" height="11" rx="2" transform="rotate(14 57 301)"/>
+                <rect x="198" y="298" width="12" height="12" rx="2" transform="rotate(-10 204 304)"/>
+                <rect x="252" y="286" width="10" height="10" rx="2" transform="rotate(22 257 291)"/>
+                <rect x="312" y="300" width="11" height="11" rx="2" transform="rotate(-18 317 305)"/>
+                <rect x="140" y="286" width="9" height="9" rx="2" transform="rotate(30 144 290)"/>
+              </g>
+            </g>
+
+            <!-- 4: Soßen -->
+            <g class="layer" data-layer="3">
+              <path d="M50 292c28-30 52 8 78-16s52 20 80-4 52 22 80 0 50 18 80 4" stroke="#fff4e2" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <path d="M62 280c28 20 54-18 82 4s54-20 82 2 54-18 82 2 40-12 62 2" stroke="#ff3d1f" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <g fill="#8e1b0c"><circle cx="100" cy="282" r="2"/><circle cx="180" cy="276" r="2"/><circle cx="250" cy="284" r="2"/><circle cx="320" cy="278" r="2"/><circle cx="140" cy="290" r="1.6"/><circle cx="290" cy="290" r="1.6"/></g>
+            </g>
+
+            <!-- 6: Brot oben (Fladenbrot mit Rautenmuster, Sesam & Schwarzkümmel) -->
+            <g class="layer" data-layer="5">
+              <path d="M34 240C30 200 44 172 90 166c80-10 160-10 240 0 46 6 60 34 56 74-116 22-236 22-352 0z" fill="url(#g-bread)"/>
+              <path d="M34 240c116 22 236 22 352 0 0 12-116 32-176 32S34 252 34 240z" fill="#f6d8a4"/>
+              <path d="M70 226l52-54M126 234l58-64M188 238l58-68M250 236l56-64M312 230l46-52M92 172l50 58M150 168l58 66M214 168l58 66M276 170l52 60" stroke="#a9611f" stroke-width="3" stroke-linecap="round" opacity=".28"/>
+              <path d="M100 180c70-10 150-10 220 0" stroke="#ffe3ad" stroke-width="10" fill="none" stroke-linecap="round" opacity=".4"/>
+              <g fill="#fff3d6">
+                <ellipse cx="110" cy="190" rx="5" ry="2.4" transform="rotate(-20 110 190)"/>
+                <ellipse cx="150" cy="180" rx="5" ry="2.4" transform="rotate(10 150 180)"/>
+                <ellipse cx="196" cy="188" rx="5" ry="2.4" transform="rotate(-8 196 188)"/>
+                <ellipse cx="240" cy="178" rx="5" ry="2.4" transform="rotate(24 240 178)"/>
+                <ellipse cx="286" cy="190" rx="5" ry="2.4" transform="rotate(-14 286 190)"/>
+                <ellipse cx="330" cy="186" rx="5" ry="2.4" transform="rotate(30 330 186)"/>
+                <ellipse cx="128" cy="214" rx="5" ry="2.4" transform="rotate(-30 128 214)"/>
+                <ellipse cx="176" cy="206" rx="5" ry="2.4" transform="rotate(12 176 206)"/>
+                <ellipse cx="222" cy="214" rx="5" ry="2.4" transform="rotate(-6 222 214)"/>
+                <ellipse cx="268" cy="208" rx="5" ry="2.4" transform="rotate(18 268 208)"/>
+                <ellipse cx="312" cy="216" rx="5" ry="2.4" transform="rotate(-22 312 216)"/>
+                <ellipse cx="80" cy="212" rx="5" ry="2.4" transform="rotate(26 80 212)"/>
+                <ellipse cx="354" cy="212" rx="5" ry="2.4" transform="rotate(-12 354 212)"/>
+              </g>
+              <g fill="#2a1a12">
+                <ellipse cx="132" cy="196" rx="2.6" ry="1.6"/><ellipse cx="214" cy="198" rx="2.6" ry="1.6" transform="rotate(30 214 198)"/>
+                <ellipse cx="262" cy="190" rx="2.6" ry="1.6"/><ellipse cx="300" cy="204" rx="2.6" ry="1.6" transform="rotate(-20 300 204)"/>
+                <ellipse cx="160" cy="226" rx="2.6" ry="1.6"/><ellipse cx="344" cy="198" rx="2.6" ry="1.6" transform="rotate(40 344 198)"/>
+                <ellipse cx="96" cy="196" rx="2.6" ry="1.6" transform="rotate(-30 96 196)"/><ellipse cx="244" cy="226" rx="2.6" ry="1.6"/>
+              </g>
+            </g>
+
+            <!-- 5: Pommes -->
+            <g class="layer" data-layer="4">
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(70 250) rotate(78)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(132 262) rotate(98)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(214 238) rotate(64)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(190 266) rotate(84)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(262 250) rotate(112)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(296 268) rotate(82)"/>
+              <use href="#i-fry" x="-11" y="-66" width="22" height="132" transform="translate(354 250) rotate(102)"/>
+            </g>
+
+            <!-- Dampf -->
+            <g class="build__steam" stroke="#fff3e3" stroke-width="5" fill="none" stroke-linecap="round">
+              <path d="M160 150c-12-16 12-26 0-44s10-26 0-40"/>
+              <path d="M210 144c-12-16 12-26 0-44s10-26 0-40"/>
+              <path d="M260 150c-12-16 12-26 0-44s10-26 0-40"/>
+            </g>
+          </svg>
+
+          <div class="build__stamp">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="stamp-circle" d="M100 100m-72 0a72 72 0 1 1 144 0a72 72 0 1 1-144 0"/></defs>
+              <text><textPath href="#stamp-circle" textLength="448" lengthAdjust="spacing">GUTEN APPETIT ✦ AFİYET OLSUN ✦ </textPath></text>
+            </svg>
+            <span>POM<br>DÖNER</span>
+          </div>
+        </div>
+
+        <div class="build__text">
+          <p class="eyebrow">Die Hausspezialität</p>
+          <h2 class="build__title" id="build-title">Was ist ein <em>Pom Döner?</em></h2>
+          <p class="build__lead">Ganz einfach: ein richtig guter Döner – und die Pommes kommen direkt mit rein. Scroll weiter und schau zu, wie er entsteht.</p>
+
+          <ol class="steps">
+            <li class="step is-active">
+              <span class="step__num">01</span>
+              <div><h3>Fladenbrot</h3><p>Frisch getoastet – außen knusprig, innen fluffig.</p></div>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <div><h3>Döner-Fleisch</h3><p>Saftig und frisch vom Spieß geschnitten.</p></div>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <div><h3>Salat &amp; Toppings</h3><p>Knackiger Salat, Tomaten, Mais und Schafskäse.</p></div>
+            </li>
+            <li class="step">
+              <span class="step__num">04</span>
+              <div><h3>Soßen</h3><p>Cremig-weiß und scharf-rot – ganz wie du magst.</p></div>
+            </li>
+            <li class="step">
+              <span class="step__num">05</span>
+              <div><h3>Pommes rein!</h3><p>Goldene, knusprige Pommes direkt in den Döner. Deckel drauf – fertig ist der Pom Döner.</p></div>
+            </li>
+          </ol>
+          <div class="build__meter" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÜ (horizontal) -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="menu__sticky">
+        <header class="menu__head">
+          <div>
+            <p class="eyebrow">Unsere Klassiker</p>
+            <h2 class="section-title" id="menu-title">Alles vom <em>Spieß.</em></h2>
+          </div>
+          <div class="menu__progress" aria-hidden="true">
+            <span class="menu__count">01</span>
+            <span class="menu__bar"><i></i></span>
+            <span>05</span>
+          </div>
+        </header>
+
+        <div class="menu__viewport">
+          <div class="menu__track">
+            <article class="card card--star" data-tilt>
+              <div class="card__media">
+                <img src="assets/img/pom-doener-sm.webp" srcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w" sizes="(min-width: 900px) 520px, 82vw" width="1200" height="1600" loading="lazy" alt="Pom Döner mit Pommes auf einem verzierten Metallteller" style="--pos:50% 55%">
+              </div>
+              <span class="card__num">01</span>
+              <span class="card__tag"><svg><use href="#i-spark"/></svg> Star des Hauses</span>
+              <div class="card__body">
+                <h3 class="card__title">Pom Döner</h3>
+                <p>Döner im Fladenbrot mit Salat, Soße und Schafskäse – und die knusprigen Pommes stecken direkt mit drin.</p>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <div class="card__media">
+                <img src="assets/img/doener-kebab-sm.webp" srcset="assets/img/doener-kebab-sm.webp 640w, assets/img/doener-kebab.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Kebab im Fladenbrot mit Mais, Schafskäse, Salat und Soßen, daneben ein Ayran" style="--pos:70% 62%">
+              </div>
+              <span class="card__num">02</span>
+              <span class="card__tag">Klassiker</span>
+              <div class="card__body">
+                <h3 class="card__title">Döner Kebab</h3>
+                <p>Getoastetes Fladenbrot, saftiges Fleisch vom Spieß, Salat, Mais, Schafskäse und Soßen.</p>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <div class="card__media">
+                <img src="assets/img/doener-box-sm.webp" srcset="assets/img/doener-box-sm.webp 640w, assets/img/doener-box.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Box mit Fleisch, Mais, Soße und Chiliflocken" style="--pos:30% 45%">
+              </div>
+              <span class="card__num">03</span>
+              <span class="card__tag">To go</span>
+              <div class="card__body">
+                <h3 class="card__title">Döner Box</h3>
+                <p>Alles drin, alles dabei: Döner-Fleisch, Toppings und Soße in der Box – perfekt für unterwegs.</p>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <div class="card__media">
+                <img src="assets/img/doener-teller-sm.webp" srcset="assets/img/doener-teller-sm.webp 640w, assets/img/doener-teller.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Teller mit Fleisch, Kartoffeln, Salat, Mais und Soßen" style="--pos:50% 68%">
+              </div>
+              <span class="card__num">04</span>
+              <span class="card__tag">Richtig satt</span>
+              <div class="card__body">
+                <h3 class="card__title">Döner Teller</h3>
+                <p>Döner-Fleisch auf dem Teller mit knusprigen Kartoffeln, Salat, Mais und Soßen.</p>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <div class="card__media">
+                <img src="assets/img/doener-pizza-crop-sm.webp" srcset="assets/img/doener-pizza-crop-sm.webp 640w, assets/img/doener-pizza-crop.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="1280" loading="lazy" alt="Döner Pizza mit Käse und scharfer Soße, daneben eine Dose Orangenlimo" style="--pos:50% 70%">
+              </div>
+              <span class="card__num">05</span>
+              <span class="card__tag">Pizza trifft Döner</span>
+              <div class="card__body">
+                <h3 class="card__title">Döner Pizza</h3>
+                <p>Knuspriger Boden, Tomatensoße, geschmolzener Käse, Döner-Fleisch – und scharfe Soße on top.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement" aria-label="Unser Motto">
+      <p class="statement__text" data-words>Bei uns liegen die <mark class="hl-fry">Pommes</mark> nicht daneben. Sie kommen <mark class="hl-sauce">rein.</mark></p>
+    </section>
+
+    <!-- GETRÄNKE -->
+    <section class="drinks" id="getraenke" aria-labelledby="drinks-title">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Und dazu?</p>
+        <h2 class="section-title" id="drinks-title">Eiskalt <em>dazu.</em></h2>
+      </header>
+
+      <div class="drinks__grid">
+        <article class="drink drink--ayran" data-tilt data-reveal style="--d:0">
+          <div class="drink__stage">
+            <div class="bubbles"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="cup"><span class="cup__lid"></span><span class="cup__wave"></span></div>
+          </div>
+          <h3>Ayran</h3>
+          <p>Kühl, cremig, leicht salzig – der Klassiker zum Döner.</p>
+        </article>
+
+        <article class="drink drink--gazoz" data-tilt data-reveal style="--d:1">
+          <div class="drink__stage">
+            <div class="bubbles"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="can can--tall"><span class="can__band"></span></div>
+          </div>
+          <h3>Uludağ Gazoz</h3>
+          <p>Türkische Limo mit Orangengeschmack – spritzig und süß.</p>
+        </article>
+
+        <article class="drink drink--soft" data-tilt data-reveal style="--d:2">
+          <div class="drink__stage">
+            <div class="bubbles"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="can"><span class="can__band"></span></div>
+          </div>
+          <h3>Softdrinks</h3>
+          <p>Fanta Exotic und weitere Softdrinks – eiskalt aus dem Kühlschrank.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section class="gallery" id="galerie" aria-labelledby="gallery-title">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Galerie</p>
+        <h2 class="section-title" id="gallery-title">Frisch vom <em>Spieß.</em></h2>
+      </header>
+
+      <div class="gallery__grid">
+        <div class="gallery__col" data-speed="-0.06">
+          <button class="shot" type="button" data-full="assets/img/pom-doener.webp" data-cursor="Ansehen" data-reveal>
+            <img src="assets/img/pom-doener-sm.webp" width="640" height="853" loading="lazy" alt="Pom Döner mit Pommes">
+          </button>
+          <button class="shot" type="button" data-full="assets/img/doener-teller.webp" data-cursor="Ansehen" data-reveal>
+            <img src="assets/img/doener-teller-sm.webp" width="640" height="1138" loading="lazy" alt="Döner Teller mit Kartoffeln">
+          </button>
+        </div>
+        <div class="gallery__col" data-speed="0.08">
+          <button class="shot" type="button" data-full="assets/img/doener-kebab.webp" data-cursor="Ansehen" data-reveal>
+            <img src="assets/img/doener-kebab-sm.webp" width="640" height="1138" loading="lazy" alt="Döner Kebab mit Ayran">
+          </button>
+          <button class="shot" type="button" data-full="assets/img/doener-box.webp" data-cursor="Ansehen" data-reveal>
+            <img src="assets/img/doener-box-sm.webp" width="640" height="1138" loading="lazy" alt="Döner Box">
+          </button>
+        </div>
+        <div class="gallery__col" data-speed="-0.02">
+          <button class="shot" type="button" data-full="assets/img/doener-pizza.webp" data-cursor="Ansehen" data-reveal>
+            <img src="assets/img/doener-pizza-sm.webp" width="640" height="1138" loading="lazy" alt="Döner Pizza von Hasan's in Bad Schussenried">
+          </button>
+          <div class="gallery__note" data-reveal>
+            <svg><use href="#i-spark"/></svg>
+            <p>Jeden Tag frisch vom Spieß – in Bad Schussenried.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESUCH -->
+    <section class="visit" id="besuch" aria-labelledby="visit-title">
+      <div class="visit__grill" aria-hidden="true">
+        <span class="visit__heat"></span>
+        <svg class="visit__spit"><use href="#i-spit"/></svg>
+      </div>
+
+      <div class="visit__content">
+        <p class="eyebrow" data-reveal>Besuch uns</p>
+        <h2 class="visit__title" id="visit-title" data-reveal>Komm vorbei.<br><span>Hunger mitbringen.</span></h2>
+        <p class="visit__place" data-reveal>Hasan's Döner-Pizza-Kebab<br>Bad Schussenried</p>
+
+        <div class="visit__cards">
+          <div class="info" data-reveal style="--d:0">
+            <h3>Hier essen</h3>
+            <p>Gemütlich drinnen sitzen – frisch auf den Teller.</p>
+          </div>
+          <div class="info" data-reveal style="--d:1">
+            <h3>Zum Mitnehmen</h3>
+            <p>Pom Döner, Box oder Pizza – eingepackt und los.</p>
+          </div>
+        </div>
+
+        <a class="btn btn--primary btn--big magnetic" data-reveal href="https://www.google.com/maps/search/?api=1&amp;query=Hasan%27s+D%C3%B6ner+Pizza+Kebab+Bad+Schussenried" target="_blank" rel="noopener">Route planen ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__big" href="#top" aria-label="Nach oben">HASAN'S</a>
+    <div class="footer__row">
+      <p>© <span data-year>2026</span> Hasan's Döner · Pizza · Kebab — Bad Schussenried</p>
+      <a href="#top" class="footer__top">Nach oben ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Bildansicht">
+    <img alt="">
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Schließen">✕</button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Vorheriges Bild">←</button>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Nächstes Bild">→</button>
+  </dialog>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
