@@ -309,7 +309,8 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   transition: opacity .5s, transform .7s var(--ease-out);
 }
 .menu-open .mobile-menu a { opacity: 1; transform: none; transition-delay: calc(.25s + var(--i) * .06s); }
-.mobile-menu__foot { margin-top: auto; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; }
+.mobile-menu__foot { margin-top: auto; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; line-height: 1.8; }
+.mobile-menu__foot a { font-family: inherit; font-size: inherit; line-height: inherit; text-transform: none; letter-spacing: .06em; opacity: 1; transform: none; border-bottom: 2px solid var(--bg); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -492,6 +493,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: clamp(24px, 5vw, 80px);
+  overflow: hidden; /* herausragende Pommes dürfen die Seite nicht verbreitern */
 }
 .build__stage {
   position: relative;
@@ -945,11 +947,39 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .visit__spit { width: min(220px, 60%); height: auto; aspect-ratio: 200 / 360; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .6)); }
 .visit__title { font-size: clamp(2.2rem, 5.2vw, 4.8rem); text-transform: uppercase; margin: .3em 0 .4em; }
 .visit__title span { color: var(--fry); }
-.visit__place { font-family: var(--font-display); font-weight: 600; font-size: clamp(1rem, 1.6vw, 1.3rem); line-height: 1.4; color: var(--muted); margin-bottom: 28px; }
-.visit__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 32px; }
+.visit__status { margin-bottom: 24px; }
+.visit__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
 .info { padding: 22px; border-radius: 20px; background: rgba(255, 243, 227, .05); border: 1px solid var(--line); }
-.info h3 { font-size: 1.05rem; text-transform: uppercase; margin-bottom: 8px; color: var(--fry); }
-.info p { color: var(--muted); font-size: .95rem; line-height: 1.5; }
+.info h3 { font-size: .95rem; text-transform: uppercase; margin-bottom: 8px; color: var(--fry); }
+.info p, .info address { color: var(--muted); font-size: .95rem; font-style: normal; line-height: 1.5; }
+.info strong { color: var(--cream); }
+.info a { color: var(--cream); font-weight: 800; border-bottom: 2px solid var(--fry); transition: color .3s; }
+.info a:hover { color: var(--fry); }
+.chips { list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { padding: .5em 1em; border-radius: 999px; font-size: .82rem; font-weight: 700; color: var(--muted); background: rgba(255, 243, 227, .04); border: 1px solid var(--line); }
+.chips li.is-key { background: var(--fry); border-color: var(--fry); color: var(--bg); }
+.visit__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Live-Status: geöffnet / geschlossen */
+.open-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .65em;
+  padding: .55em 1.05em;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 800;
+  background: rgba(255, 243, 227, .06);
+  border: 1px solid var(--line);
+}
+.open-status__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--dim); flex: none; }
+.open-status.is-open .open-status__dot { background: #3ddc84; animation: pulse-open 1.8s infinite; }
+.open-status.is-closed .open-status__dot { background: var(--sauce); }
+@keyframes pulse-open {
+  0% { box-shadow: 0 0 0 0 rgba(61, 220, 132, .7); }
+  70%, 100% { box-shadow: 0 0 0 10px rgba(61, 220, 132, 0); }
+}
+.hero__status { margin-top: 22px; }
 
 /* ---------- Footer ---------- */
 .footer { padding: 40px var(--pad) 28px; overflow: clip; }
@@ -980,6 +1010,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   color: var(--dim);
   font-size: .85rem;
 }
+.footer__row a[href^="tel:"] { color: var(--muted); }
 .footer__top { font-weight: 800; color: var(--muted); transition: color .3s; }
 .footer__top:hover { color: var(--fry); }
 
@@ -1050,6 +1081,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   .visit__grill { min-height: 260px; order: 2; }
   .visit__spit { width: 140px; }
   .visit__cards { grid-template-columns: 1fr; }
+  .visit__actions .btn { flex: 1 1 auto; }
 }
 
 @media (max-width: 420px) {

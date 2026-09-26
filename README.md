@@ -34,11 +34,18 @@ python3 -m http.server 8000
 4. Nach 1–2 Minuten ist die Seite erreichbar unter
    `https://beratyigit2009ay-droid.github.io/Hassan-s-Kebab-D-ner-/`
 
+## Kontaktdaten auf der Seite
+
+- Zeppelinstraße 8, 88427 Bad Schussenried · Tel. 07583 926440
+- Täglich 11:00–22:00 Uhr (mit Live-Anzeige „Jetzt geöffnet / Gerade geschlossen“, deutsche Zeit)
+- Nur Barzahlung · Sitzplätze drinnen & draußen · Zum Mitnehmen · keine Reservierungen
+
+Ändern sich die Öffnungszeiten, müssen sie an drei Stellen angepasst werden:
+`index.html` (Karte „Öffnungszeiten“ und `openingHoursSpecification`) sowie
+`OPENS` / `CLOSES` in `assets/js/main.js`.
+
 ## Noch einzutragen
 
-Diese Infos kenne ich nicht, deshalb sind sie (noch) nicht auf der Seite:
-
-- Adresse (Straße), Telefonnummer, Öffnungszeiten
 - Preise im Menü
 - **Impressum** und **Datenschutzerklärung** – für eine geschäftliche Website in Deutschland Pflicht
 

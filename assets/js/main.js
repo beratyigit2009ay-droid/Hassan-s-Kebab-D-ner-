@@ -227,8 +227,14 @@
 
   /* ---------- Hero-Parallax ---------- */
   const hero = { el: $('.hero'), frame: $('.hero__frame'), content: $('.hero__content'), floaters: $$('.floater') };
+  const resetHeroScroll = () => {
+    hero.frame.style.translate = '';
+    hero.content.style.translate = '';
+    hero.content.style.opacity = '';
+  };
   const updateHeroScroll = (y) => {
-    if (reduce || y > vh * 1.2) return;
+    // Am Handy ist der Hero höher als der Bildschirm – dort keine Parallaxe
+    if (reduce || !desktop.matches || y > vh * 1.2) return;
     hero.frame.style.translate = `0 ${(y * 0.12).toFixed(1)}px`;
     hero.content.style.translate = `0 ${(y * 0.22).toFixed(1)}px`;
     hero.content.style.opacity = String(clamp(1 - y / (vh * 0.9)));
@@ -333,6 +339,36 @@
     });
   }
 
+  /* ---------- Live-Status: geöffnet / geschlossen (täglich 11–22 Uhr) ---------- */
+  const OPENS = 11 * 60;
+  const CLOSES = 22 * 60;
+  const statusEls = $$('[data-open-status]');
+  const updateOpenStatus = () => {
+    let minutes;
+    try {
+      const parts = new Intl.DateTimeFormat('de-DE', {
+        timeZone: 'Europe/Berlin', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+      }).formatToParts(new Date());
+      const get = (type) => Number(parts.find((p) => p.type === type).value);
+      minutes = get('hour') * 60 + get('minute');
+    } catch {
+      return; // Fallback: statischer Text „Täglich 11:00–22:00 Uhr“ bleibt stehen
+    }
+    const open = minutes >= OPENS && minutes < CLOSES;
+    let text;
+    if (open) text = CLOSES - minutes <= 30 ? 'Jetzt geöffnet · schließt bald (22:00 Uhr)' : 'Jetzt geöffnet · bis 22:00 Uhr';
+    else text = minutes < OPENS ? 'Gerade geschlossen · öffnet um 11:00 Uhr' : 'Gerade geschlossen · öffnet morgen um 11:00 Uhr';
+    statusEls.forEach((el) => {
+      el.classList.toggle('is-open', open);
+      el.classList.toggle('is-closed', !open);
+      $('[data-open-text]', el).textContent = text;
+    });
+  };
+  if (statusEls.length) {
+    updateOpenStatus();
+    setInterval(updateOpenStatus, 60 * 1000);
+  }
+
   /* ---------- Jahr im Footer ---------- */
   const yearEl = $('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -341,6 +377,7 @@
   function measure() {
     vw = innerWidth;
     vh = innerHeight;
+    if (!desktop.matches) resetHeroScroll();
     setupMenu();
     if (build.el) {
       build.top = pageTop(build.el);

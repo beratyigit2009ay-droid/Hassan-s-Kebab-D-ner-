@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hasan's Döner · Pizza · Kebab – Pom Döner in Bad Schussenried</title>
-  <meta name="description" content="Hasan's Döner-Pizza-Kebab in Bad Schussenried: Pom Döner (Döner mit Pommes drin), Döner Kebab, Döner Box, Döner Teller und Döner Pizza.">
+  <meta name="description" content="Hasan's Döner-Pizza-Kebab, Zeppelinstraße 8 in Bad Schussenried – täglich 11–22 Uhr. Pom Döner (Döner mit Pommes drin), Döner Kebab, Döner Box, Döner Teller und Döner Pizza.">
   <meta name="theme-color" content="#0e0a07">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -27,12 +27,25 @@
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Hasan's Döner-Pizza-Kebab",
+    "alternateName": "Döner-Pizza-Kebab Hasans",
     "servesCuisine": ["Döner", "Kebab", "Pizza", "Türkisch"],
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Zeppelinstraße 8",
+      "postalCode": "88427",
       "addressLocality": "Bad Schussenried",
       "addressCountry": "DE"
-    }
+    },
+    "telephone": "+49 7583 926440",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    }],
+    "paymentAccepted": "Cash",
+    "priceRange": "€",
+    "acceptsReservations": false
   }
   </script>
 </head>
@@ -129,7 +142,7 @@
       <a href="#galerie">Galerie</a>
       <a href="#besuch">Besuch</a>
     </nav>
-    <a class="btn btn--small btn--primary nav__cta magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=Hasan%27s+D%C3%B6ner+Pizza+Kebab+Bad+Schussenried" target="_blank" rel="noopener">Route ↗</a>
+    <a class="btn btn--small btn--primary nav__cta magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Route ↗</a>
     <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
       <span></span><span></span>
     </button>
@@ -143,7 +156,7 @@
       <a href="#galerie" style="--i:3">Galerie</a>
       <a href="#besuch" style="--i:4">Besuch</a>
     </nav>
-    <p class="mobile-menu__foot">Bad Schussenried</p>
+    <p class="mobile-menu__foot">Zeppelinstraße 8 · Bad Schussenried<br><a href="tel:+497583926440">07583 926440</a></p>
   </div>
 
   <main id="top">
@@ -173,6 +186,9 @@
           <a class="btn btn--primary magnetic" href="#menu">Menü entdecken</a>
           <a class="btn btn--ghost magnetic" href="#pom-doener">Was ist Pom Döner?</a>
         </div>
+        <p class="open-status hero__status" data-open-status data-hero style="--d:3">
+          <span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span>
+        </p>
       </div>
 
       <div class="hero__visual">
@@ -549,20 +565,36 @@
       <div class="visit__content">
         <p class="eyebrow" data-reveal>Besuch uns</p>
         <h2 class="visit__title" id="visit-title" data-reveal>Komm vorbei.<br><span>Hunger mitbringen.</span></h2>
-        <p class="visit__place" data-reveal>Hasan's Döner-Pizza-Kebab<br>Bad Schussenried</p>
+        <p class="open-status visit__status" data-open-status data-reveal>
+          <span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span>
+        </p>
 
         <div class="visit__cards">
           <div class="info" data-reveal style="--d:0">
-            <h3>Hier essen</h3>
-            <p>Gemütlich drinnen sitzen – frisch auf den Teller.</p>
+            <h3>Adresse</h3>
+            <address>Zeppelinstraße 8<br>88427 Bad Schussenried</address>
           </div>
           <div class="info" data-reveal style="--d:1">
-            <h3>Zum Mitnehmen</h3>
-            <p>Pom Döner, Box oder Pizza – eingepackt und los.</p>
+            <h3>Öffnungszeiten</h3>
+            <p>Montag – Sonntag<br><strong>11:00 – 22:00 Uhr</strong></p>
+          </div>
+          <div class="info" data-reveal style="--d:2">
+            <h3>Telefon</h3>
+            <p><a href="tel:+497583926440">07583 926440</a></p>
           </div>
         </div>
 
-        <a class="btn btn--primary btn--big magnetic" data-reveal href="https://www.google.com/maps/search/?api=1&amp;query=Hasan%27s+D%C3%B6ner+Pizza+Kebab+Bad+Schussenried" target="_blank" rel="noopener">Route planen ↗</a>
+        <ul class="chips" data-reveal aria-label="Service">
+          <li class="is-key">Nur Barzahlung</li>
+          <li>Drinnen &amp; draußen sitzen</li>
+          <li>Zum Mitnehmen</li>
+          <li>Keine Reservierung – einfach vorbeikommen</li>
+        </ul>
+
+        <div class="visit__actions" data-reveal>
+          <a class="btn btn--primary btn--big magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Route planen ↗</a>
+          <a class="btn btn--ghost btn--big magnetic" href="tel:+497583926440">Anrufen</a>
+        </div>
       </div>
     </section>
   </main>
@@ -570,7 +602,7 @@
   <footer class="footer">
     <a class="footer__big" href="#top" aria-label="Nach oben">HASAN'S</a>
     <div class="footer__row">
-      <p>© <span data-year>2026</span> Hasan's Döner · Pizza · Kebab — Bad Schussenried</p>
+      <p>© <span data-year>2026</span> Hasan's Döner · Pizza · Kebab — Zeppelinstraße 8, 88427 Bad Schussenried · <a href="tel:+497583926440">07583 926440</a></p>
       <a href="#top" class="footer__top">Nach oben ↑</a>
     </div>
   </footer>
