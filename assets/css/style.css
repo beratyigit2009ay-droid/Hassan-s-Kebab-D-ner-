@@ -691,6 +691,80 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .card--star .card__title { color: var(--fry); font-size: clamp(1.9rem, 3.2vw, 3rem); }
 .card__body p { color: rgba(255, 243, 227, .82); font-size: .95rem; line-height: 1.5; max-width: 36ch; }
 
+/* ---------- Die ganze Karte ---------- */
+.karte { padding: clamp(40px, 8vh, 100px) 0 0; }
+.karte__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(16px, 2vw, 28px);
+  max-width: calc(var(--maxw) + 2 * var(--pad));
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  align-items: start;
+}
+.karte__col { display: grid; gap: clamp(16px, 2vw, 28px); }
+.karte__group {
+  padding: clamp(22px, 3vw, 36px);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
+  border: 1px solid var(--line);
+}
+.karte__cat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  text-transform: uppercase;
+  color: var(--fry);
+  margin-bottom: 10px;
+}
+.karte__cat::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.karte__list { list-style: none; margin: 0; padding: 0; }
+.karte__list li {
+  display: grid;
+  gap: 2px;
+  padding: 14px 0;
+  border-bottom: 1px dashed rgba(255, 243, 227, .14);
+  transition: padding-left .4s var(--ease-out);
+}
+.karte__list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.karte__list li:hover { padding-left: 8px; }
+.karte__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  text-transform: uppercase;
+}
+.karte__desc { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.karte__badge {
+  padding: .35em .75em;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: none;
+  background: var(--sauce);
+  color: #fff;
+}
+.karte__more {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: calc(var(--maxw) + 2 * var(--pad));
+  margin: clamp(20px, 3vw, 32px) auto 0;
+  padding: 0 var(--pad);
+  color: var(--muted);
+  font-weight: 700;
+}
+.karte__more svg { flex: none; width: 22px; height: 22px; color: var(--fry); animation: spin 8s linear infinite; }
+.karte__more a { color: var(--cream); white-space: nowrap; border-bottom: 2px solid var(--fry); }
+.karte__more a:hover { color: var(--fry); }
+
 /* ---------- Statement ---------- */
 .statement {
   padding: clamp(100px, 18vh, 200px) var(--pad);
@@ -724,7 +798,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .drinks { padding: clamp(60px, 10vh, 120px) 0; }
 .drinks__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(16px, 2vw, 28px);
   max-width: calc(var(--maxw) + 2 * var(--pad));
   margin: 0 auto;
@@ -756,9 +830,47 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .drink--ayran { --c1: #1e5fd9; --c2: #0f3a93; --glow: rgba(60, 130, 255, .35); }
 .drink--gazoz { --c1: #ff8a1e; --c2: #d95500; --glow: rgba(255, 138, 30, .38); }
 .drink--soft { --c1: #58c243; --c2: #2e8a24; --glow: rgba(88, 194, 67, .33); }
+.drink--schorle { --c1: #f2c14e; --c2: #bf8412; --glow: rgba(242, 193, 78, .33); }
 
-.can, .cup { position: relative; animation: float 3.6s ease-in-out infinite; transition: rotate .6s var(--ease-out); }
-.drink:hover .can, .drink:hover .cup { rotate: -8deg; }
+.can, .cup, .bottle { position: relative; animation: float 3.6s ease-in-out infinite; transition: rotate .6s var(--ease-out); }
+.drink:hover .can, .drink:hover .cup, .drink:hover .bottle { rotate: -8deg; }
+.bottle {
+  width: 72px;
+  height: 140px;
+  margin-bottom: 26px;
+  border-radius: 24px 24px 12px 12px;
+  background: linear-gradient(90deg, var(--c2) 0%, var(--c1) 30%, color-mix(in srgb, var(--c1), #fff 40%) 45%, var(--c1) 60%, var(--c2) 100%);
+  box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .7);
+}
+.bottle::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 6px);
+  width: 28px;
+  height: 58px;
+  translate: -50% 0;
+  border-radius: 8px 8px 2px 2px;
+  background: linear-gradient(90deg, var(--c2), var(--c1) 40%, color-mix(in srgb, var(--c1), #fff 35%) 50%, var(--c2));
+}
+.bottle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 50px);
+  width: 32px;
+  height: 12px;
+  translate: -50% 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #8f8f8f, #e6e6e6 45%, #9a9a9a);
+}
+.bottle__label {
+  position: absolute;
+  left: 0; right: 0;
+  top: 28%;
+  height: 42%;
+  background: radial-gradient(circle at 50% 58%, #e8352a 0 16%, transparent 17%), #ffe25a;
+}
 .can {
   width: 92px;
   height: 170px;
@@ -1023,6 +1135,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 
 @media (max-width: 1100px) {
   .nav__links a { padding: .5em .6em; }
+  .drinks__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 899px) {
@@ -1063,6 +1176,11 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   .card, .card--star { width: 80vw; height: auto; aspect-ratio: 3 / 4.2; scroll-snap-align: center; }
 
   .drinks__grid { grid-template-columns: 1fr; }
+  .karte__grid { grid-template-columns: minmax(0, 1fr); }
+  .karte__more { align-items: flex-start; }
+  .bottle { width: 50px; height: 96px; margin-bottom: 14px; }
+  .bottle::before { width: 20px; height: 40px; }
+  .bottle::after { width: 24px; height: 9px; bottom: calc(100% + 34px); }
   .drink { display: grid; grid-template-columns: 110px 1fr; grid-template-rows: auto auto; column-gap: 18px; align-items: center; padding: 18px; }
   .drink__stage { grid-row: 1 / 3; height: 180px; }
   .drink h3 { margin: 0 0 6px; align-self: end; }

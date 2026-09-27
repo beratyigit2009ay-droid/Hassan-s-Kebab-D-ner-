@@ -10,7 +10,9 @@ mit dem **Pom Döner** (Döner mit Pommes drin) als Star.
 - **Laufbänder** (werden beim Scrollen schneller)
 - **Pom-Döner-Baukasten**: beim Scrollen baut sich der Pom Döner Schicht für Schicht zusammen
   (Brot → Fleisch → Salat → Soßen → Pommes → Deckel drauf)
-- **Menü** als horizontale Scroll-Galerie (am Handy zum Wischen)
+- **Speisekarte** als horizontale Scroll-Galerie (am Handy zum Wischen):
+  Pom Döner, Döner, Dürüm, Döner Box, Döner Teller, Döner Pizza
+- **Die ganze Karte**: Übersicht aller Gerichte und Getränke
 - **Getränke**, **Galerie mit Lightbox**, **Besuch/Route**
 - Eigener Cursor, magnetische Buttons, 3D-Tilt auf Karten (nur am Desktop)
 - Respektiert „Bewegung reduzieren“ im Betriebssystem
