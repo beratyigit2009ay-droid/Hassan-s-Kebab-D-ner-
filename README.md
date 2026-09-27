@@ -12,8 +12,9 @@ mit dem **Pom Döner** (Döner mit Pommes drin) als Star.
   (Brot → Fleisch → Salat → Soßen → Pommes → Deckel drauf)
 - **Speisekarte** als horizontale Scroll-Galerie (am Handy zum Wischen):
   Pom Döner, Döner, Dürüm, Döner Box, Döner Teller, Döner Pizza
-- **Die ganze Karte**: alle 100+ Gerichte und Getränke mit Preisen und Allergenen,
-  mit Kategorien zum Antippen und Suchfeld
+- **Die ganze Karte** (Startseite): Kacheln für alle Kategorien – ein Klick öffnet die Speisekarte
+- **Eigene Seite `speisekarte.html`**: alle 100+ Gerichte und Getränke mit Preisen und Allergenen,
+  Kategorie-Leiste (springt zur Kategorie und zeigt, wo man gerade ist) und Suchfeld
 - **Getränke**, **Galerie mit Lightbox**, **Besuch/Route**
 - Eigener Cursor, magnetische Buttons, 3D-Tilt auf Karten (nur am Desktop)
 - Respektiert „Bewegung reduzieren“ im Betriebssystem
@@ -56,9 +57,16 @@ python3 -m http.server 8000
 ## Struktur
 
 ```
-index.html            Seite
-assets/css/style.css  Design & Animationen
-assets/js/main.js     Scroll- und Interaktions-Animationen
-assets/img/           Fotos (WebP) + Vorschaubild
-assets/fonts/         Schriften (lokal)
+index.html                  Startseite
+speisekarte.html            Speisekarte (eigene Seite)
+assets/css/style.css        Design & Animationen (beide Seiten)
+assets/js/common.js         Navigation, Live-Status, Fortschrittsbalken (beide Seiten)
+assets/js/main.js           Animationen der Startseite
+assets/js/speisekarte.js    Kategorie-Leiste & Suche der Speisekarte
+assets/img/                 Fotos (WebP) + Vorschaubild
+assets/fonts/               Schriften (lokal)
+download/hasans-website.zip Alle Website-Dateien in einem Ordner zum Herunterladen
 ```
+
+Nach Änderungen an CSS/JS die Versionsnummer `?v=…` in beiden HTML-Dateien erhöhen,
+damit Browser nicht die alte Version aus dem Zwischenspeicher zeigen.

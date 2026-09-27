@@ -109,7 +109,7 @@ mark { background: none; color: inherit; }
   height: 2px;
   background: var(--sauce);
 }
-.hero .eyebrow::before { display: none; }
+.hero .eyebrow::before, .page-head .eyebrow::before { display: none; }
 
 .section-title {
   font-size: clamp(2.4rem, 7vw, 6rem);
@@ -743,8 +743,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 }
 .karte__tab span { margin-left: .45em; font-size: .78em; opacity: .6; }
 .karte__tab:hover { color: var(--cream); border-color: rgba(255, 243, 227, .3); }
-.karte__tab[aria-selected="true"] { color: var(--bg); background: var(--fry); border-color: var(--fry); }
-.karte__tabs.is-dim .karte__tab { opacity: .45; }
+.karte__tab.is-active { color: var(--bg); background: var(--fry); border-color: var(--fry); }
 .karte__search {
   flex: 0 0 230px;
   display: flex;
@@ -771,11 +770,10 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 }
 .karte__search input::placeholder { color: var(--dim); }
 
-.kat { margin-bottom: 40px; }
-.js .karte__cats:not(.is-searching) .kat:not(.is-active) { display: none; }
+.kat { margin-bottom: 48px; scroll-margin-top: 170px; }
 .karte__cats.is-searching .kat.no-hits { display: none; }
 .kat__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-bottom: 6px; }
-.kat__head h3 { font-size: clamp(1.5rem, 2.8vw, 2.3rem); text-transform: uppercase; color: var(--fry); }
+.kat__head h2 { font-size: clamp(1.5rem, 2.8vw, 2.3rem); text-transform: uppercase; color: var(--fry); }
 .kat__note { color: var(--muted); font-size: .92rem; }
 .kat__list {
   list-style: none;
@@ -834,7 +832,8 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .tag--hot { color: #ff8a6c; background: rgba(255, 61, 31, .12); border: 1px solid rgba(255, 61, 31, .4); }
 .tag--star { color: #fff; background: var(--sauce); }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-.js .kat.is-active .gericht, .js .karte__cats.is-searching .gericht { animation: rise .55s var(--ease-out) both; animation-delay: calc(min(var(--i, 0), 18) * 22ms); }
+.js .karte__cats:not(.is-searching) .kat:not(.is-in) .gericht { opacity: 0; }
+.js .kat.is-in .gericht { animation: rise .55s var(--ease-out) both; animation-delay: calc(min(var(--i, 0), 18) * 22ms); }
 .karte__empty { padding: 40px 0; text-align: center; color: var(--muted); font-weight: 700; }
 .karte__empty a { color: var(--cream); border-bottom: 2px solid var(--fry); }
 .karte__more {
@@ -850,6 +849,105 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 .karte__more svg { flex: none; width: 20px; height: 20px; margin-top: 2px; color: var(--fry); animation: spin 8s linear infinite; }
 .karte__more a { color: var(--cream); white-space: nowrap; border-bottom: 2px solid var(--fry); }
 .karte__more a:hover { color: var(--fry); }
+
+.card__link { position: absolute; inset: 0; z-index: 4; border-radius: inherit; }
+.card__link:focus-visible { outline-offset: -4px; }
+.card__more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: .85rem;
+  font-weight: 800;
+  color: var(--fry);
+  transition: translate .4s var(--ease-out);
+}
+.card:hover .card__more { translate: 6px 0; }
+.drinks__more { max-width: calc(var(--maxw) + 2 * var(--pad)); margin: 28px auto 0; padding: 0 var(--pad); }
+.drinks__more a { font-weight: 800; color: var(--fry); border-bottom: 2px solid currentColor; }
+
+/* ---------- Kategorie-Kacheln (Startseite) ---------- */
+.kat-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(10px, 1.2vw, 16px);
+  max-width: calc(var(--maxw) + 2 * var(--pad));
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.kat-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  min-height: 138px;
+  padding: 20px;
+  border-radius: 22px;
+  background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: transform .5s var(--ease-out), background .35s, border-color .35s, color .35s;
+}
+.kat-tile:hover, .kat-tile:focus-visible { transform: translateY(-6px); background: var(--fry); border-color: var(--fry); color: var(--bg); }
+.kat-tile--star { background: linear-gradient(160deg, var(--sauce), #c22a12); border-color: var(--sauce); }
+.kat-tile__name { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.05rem, 1.5vw, 1.35rem); line-height: 1.1; text-transform: uppercase; padding-right: 36px; }
+.kat-tile__meta { font-size: .82rem; font-weight: 700; color: var(--muted); transition: color .35s; }
+.kat-tile--star .kat-tile__meta { color: rgba(255, 255, 255, .85); }
+.kat-tile:hover .kat-tile__meta, .kat-tile:focus-visible .kat-tile__meta { color: rgba(14, 10, 7, .75); }
+.kat-tile__arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 800;
+  background: rgba(255, 243, 227, .1);
+  transition: transform .5s var(--ease-out), background .35s, color .35s;
+}
+.kat-tile:hover .kat-tile__arrow, .kat-tile:focus-visible .kat-tile__arrow { transform: rotate(-45deg); background: var(--bg); color: var(--fry); }
+.karte__cta { display: grid; justify-items: center; gap: 14px; margin: clamp(28px, 4vw, 44px) auto 0; padding: 0 var(--pad); text-align: center; }
+.karte__cta p { color: var(--muted); font-size: .9rem; font-weight: 700; }
+
+/* ---------- Speisekarte-Seite ---------- */
+.nav__links a[aria-current="page"] { color: var(--cream); background: rgba(255, 243, 227, .09); }
+.page-head {
+  position: relative;
+  max-width: calc(var(--maxw) + 2 * var(--pad));
+  margin: 0 auto;
+  padding: 130px var(--pad) clamp(36px, 6vh, 64px);
+}
+.page-head__bg { position: absolute; inset: 0 calc(50% - 50vw) -20vh; z-index: -1; overflow: hidden; pointer-events: none; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+.page-head__bg .blob--1 { top: -10vh; }
+.page-head > :not(.page-head__bg) { animation: rise .9s var(--ease-out) both; animation-delay: calc(var(--d, 0) * 90ms); }
+.page-head__back { display: table; margin-bottom: 22px; font-weight: 800; font-size: .9rem; color: var(--muted); transition: color .3s, translate .4s var(--ease-out); }
+.page-head__back:hover { color: var(--fry); translate: -4px 0; }
+.page-head__title {
+  margin: .25em 0 .3em;
+  font-size: clamp(2.2rem, 9.5vw, 8rem);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+}
+.page-head__lead { max-width: 52ch; color: var(--muted); font-size: clamp(1rem, 1.3vw, 1.15rem); }
+.page-head__info { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .55em 1.05em;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 800;
+  color: var(--cream);
+  background: rgba(255, 243, 227, .06);
+  border: 1px solid var(--line);
+  transition: border-color .3s, color .3s;
+}
+a.chip:hover { border-color: var(--fry); color: var(--fry); }
+.chip--key { color: var(--bg); background: var(--fry); border-color: var(--fry); }
+.karte--full { padding-top: 0; }
 
 .card__price {
   display: inline-block;
@@ -1235,6 +1333,7 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 
 @media (max-width: 1100px) {
   .nav__links a { padding: .5em .6em; }
+  .kat-tiles { grid-template-columns: repeat(3, 1fr); }
   .drinks__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1279,6 +1378,11 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   .karte__tools { top: 72px; flex-direction: column-reverse; align-items: stretch; margin: 0 -8px 18px; padding: 8px; border-radius: 20px; }
   .karte__search { flex: none; }
   .kat__list { grid-template-columns: minmax(0, 1fr); }
+  .kat { scroll-margin-top: 210px; }
+  .kat-tiles { grid-template-columns: repeat(2, 1fr); }
+  .kat-tile { min-height: 116px; padding: 16px; }
+  .kat-tile__arrow { top: 12px; right: 12px; width: 30px; height: 30px; }
+  .page-head { padding-top: 104px; }
   .gericht { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; padding: 14px 0; }
   .bottle { width: 50px; height: 96px; margin-bottom: 14px; }
   .bottle::before { width: 20px; height: 40px; }

@@ -1,4 +1,4 @@
-/* Hasan's — Pom Döner · Animationen */
+/* Hasan's — Startseite: Animationen (Navigation, Status & Co. in common.js) */
 (() => {
   const html = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -59,46 +59,6 @@
     };
     wrap(el);
   });
-
-  /* ---------- Navigation ---------- */
-  const nav = $('.nav');
-  const burger = $('.nav__burger');
-  const mobileMenu = $('#mobile-menu');
-  let menuOpen = false;
-
-  const setMenu = (open) => {
-    menuOpen = open;
-    html.classList.toggle('menu-open', open);
-    burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-    mobileMenu.inert = !open;
-    document.body.style.overflow = open ? 'hidden' : '';
-  };
-  burger.addEventListener('click', () => setMenu(!menuOpen));
-  $$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
-  addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen) setMenu(false); });
-  desktop.addEventListener('change', (e) => { if (e.matches && menuOpen) setMenu(false); });
-
-  let navLastY = scrollY;
-  const updateNav = (y) => {
-    nav.classList.toggle('is-scrolled', y > 30);
-    const dy = y - navLastY;
-    if (Math.abs(dy) > 8) {
-      nav.classList.toggle('is-hidden', dy > 0 && y > 500 && !menuOpen);
-      navLastY = y;
-    }
-  };
-
-  /* ---------- Reveal beim Scrollen ---------- */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-in');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
-  $$('[data-reveal], .footer__big').forEach((el) => revealObserver.observe(el));
 
   /* ---------- Marquee (reagiert auf Scroll-Tempo) ---------- */
   const marquees = $$('.marquee__track').map((track) => {
@@ -251,13 +211,6 @@
     hero.el.addEventListener('pointerleave', () => hero.floaters.forEach((f) => { f.style.translate = ''; }));
   }
 
-  /* ---------- Fortschrittsbalken ---------- */
-  const progress = $('.progress');
-  const updateProgress = (y) => {
-    const max = document.documentElement.scrollHeight - vh;
-    progress.style.transform = `scaleX(${max > 0 ? (y / max).toFixed(4) : 0})`;
-  };
-
   /* ---------- Custom Cursor ---------- */
   const cursor = { el: $('.cursor'), dot: $('.cursor__dot'), ring: $('.cursor__ring'), label: $('.cursor__label'), x: -100, y: -100, rx: -100, ry: -100 };
   if (finePointer && !reduce) {
@@ -339,106 +292,6 @@
     });
   }
 
-  /* ---------- Live-Status: geöffnet / geschlossen (täglich 11–22 Uhr) ---------- */
-  const OPENS = 11 * 60;
-  const CLOSES = 22 * 60;
-  const statusEls = $$('[data-open-status]');
-  const updateOpenStatus = () => {
-    let minutes;
-    try {
-      const parts = new Intl.DateTimeFormat('de-DE', {
-        timeZone: 'Europe/Berlin', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
-      }).formatToParts(new Date());
-      const get = (type) => Number(parts.find((p) => p.type === type).value);
-      minutes = get('hour') * 60 + get('minute');
-    } catch {
-      return; // Fallback: statischer Text „Täglich 11:00–22:00 Uhr“ bleibt stehen
-    }
-    const open = minutes >= OPENS && minutes < CLOSES;
-    let text;
-    if (open) text = CLOSES - minutes <= 30 ? 'Jetzt geöffnet · schließt bald (22:00 Uhr)' : 'Jetzt geöffnet · bis 22:00 Uhr';
-    else text = minutes < OPENS ? 'Gerade geschlossen · öffnet um 11:00 Uhr' : 'Gerade geschlossen · öffnet morgen um 11:00 Uhr';
-    statusEls.forEach((el) => {
-      el.classList.toggle('is-open', open);
-      el.classList.toggle('is-closed', !open);
-      $('[data-open-text]', el).textContent = text;
-    });
-  };
-  if (statusEls.length) {
-    updateOpenStatus();
-    setInterval(updateOpenStatus, 60 * 1000);
-  }
-
-  /* ---------- Speisekarte: Kategorien & Suche ---------- */
-  const karte = $('.karte');
-  if (karte) {
-    const tabs = $$('.karte__tab', karte);
-    const tabBar = $('.karte__tabs', karte);
-    const cats = $$('.kat', karte);
-    const catsWrap = $('.karte__cats', karte);
-    const tools = $('.karte__tools', karte);
-    const search = $('.karte__search input', karte);
-    const empty = $('.karte__empty', karte);
-    const norm = (str) => str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-    cats.forEach((c) => $$('.gericht', c).forEach((g, i) => {
-      g.style.setProperty('--i', i);
-      g.dataset.text = norm(g.textContent);
-    }));
-
-    const showCat = (tab, scrollToList) => {
-      if (search.value) { search.value = ''; runSearch(); }
-      tabs.forEach((t) => {
-        const on = t === tab;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-      });
-      cats.forEach((c) => c.classList.toggle('is-active', c.id === tab.getAttribute('aria-controls')));
-      // Aktiven Tab in der Leiste sichtbar machen, ohne die Seite zu verschieben
-      tabBar.scrollTo({ left: tab.offsetLeft - tabBar.clientWidth / 2 + tab.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
-      if (scrollToList) {
-        const offset = tools.getBoundingClientRect().bottom + 12;
-        const top = catsWrap.getBoundingClientRect().top;
-        if (top < offset - 1) scrollTo({ top: scrollY + top - offset, behavior: reduce ? 'auto' : 'smooth' });
-      }
-      measure();
-    };
-
-    const runSearch = () => {
-      const q = norm(search.value.trim());
-      const searching = q.length > 0;
-      catsWrap.classList.toggle('is-searching', searching);
-      tabBar.classList.toggle('is-dim', searching);
-      let hits = 0;
-      cats.forEach((c) => {
-        let catHits = 0;
-        $$('.gericht', c).forEach((g) => {
-          const ok = !searching || g.dataset.text.includes(q);
-          g.classList.toggle('is-hidden', !ok);
-          if (ok) catHits++;
-        });
-        c.classList.toggle('no-hits', searching && catHits === 0);
-        hits += catHits;
-      });
-      empty.hidden = !searching || hits > 0;
-      measure();
-    };
-
-    tabs.forEach((t) => t.addEventListener('click', () => showCat(t, true)));
-    tabBar.addEventListener('keydown', (e) => {
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-      const i = tabs.indexOf(document.activeElement);
-      if (i < 0) return;
-      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
-      next.focus();
-      showCat(next, false);
-    });
-    search.addEventListener('input', runSearch);
-  }
-
-  /* ---------- Jahr im Footer ---------- */
-  const yearEl = $('[data-year]');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
   /* ---------- Messen & Haupt-Loop ---------- */
   function measure() {
     vw = innerWidth;
@@ -473,8 +326,6 @@
 
     velocity = lerp(velocity, lastY < 0 ? 0 : y - lastY, 0.12);
     if (y !== lastY) {
-      updateNav(y);
-      updateProgress(y);
       updateHeroScroll(y);
       updateBuild(y);
       updateMenu(y);
