@@ -12,7 +12,8 @@ mit dem **Pom Döner** (Döner mit Pommes drin) als Star.
   (Brot → Fleisch → Salat → Soßen → Pommes → Deckel drauf)
 - **Speisekarte** als horizontale Scroll-Galerie (am Handy zum Wischen):
   Pom Döner, Döner, Dürüm, Döner Box, Döner Teller, Döner Pizza
-- **Die ganze Karte**: Übersicht aller Gerichte und Getränke
+- **Die ganze Karte**: alle 100+ Gerichte und Getränke mit Preisen und Allergenen,
+  mit Kategorien zum Antippen und Suchfeld
 - **Getränke**, **Galerie mit Lightbox**, **Besuch/Route**
 - Eigener Cursor, magnetische Buttons, 3D-Tilt auf Karten (nur am Desktop)
 - Respektiert „Bewegung reduzieren“ im Betriebssystem
@@ -40,7 +41,7 @@ python3 -m http.server 8000
 
 - Zeppelinstraße 8, 88427 Bad Schussenried · Tel. 07583 926440
 - Täglich 11:00–22:00 Uhr (mit Live-Anzeige „Jetzt geöffnet / Gerade geschlossen“, deutsche Zeit)
-- Nur Barzahlung · Sitzplätze drinnen & draußen · Zum Mitnehmen · keine Reservierungen
+- Bar- und Kartenzahlung · Sitzplätze drinnen & draußen · Zum Mitnehmen · keine Reservierungen
 
 Ändern sich die Öffnungszeiten, müssen sie an drei Stellen angepasst werden:
 `index.html` (Karte „Öffnungszeiten“ und `openingHoursSpecification`) sowie
@@ -48,7 +49,8 @@ python3 -m http.server 8000
 
 ## Noch einzutragen
 
-- Preise im Menü
+- Name von Pizza Nr. 70 (fehlt in der Karte, daher noch nicht auf der Seite)
+- Erklärung der Allergen-/Zusatzstoff-Kürzel (A, C, G … / 2, 3, 5 …)
 - **Impressum** und **Datenschutzerklärung** – für eine geschäftliche Website in Deutschland Pflicht
 
 ## Struktur

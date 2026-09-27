@@ -369,6 +369,72 @@
     setInterval(updateOpenStatus, 60 * 1000);
   }
 
+  /* ---------- Speisekarte: Kategorien & Suche ---------- */
+  const karte = $('.karte');
+  if (karte) {
+    const tabs = $$('.karte__tab', karte);
+    const tabBar = $('.karte__tabs', karte);
+    const cats = $$('.kat', karte);
+    const catsWrap = $('.karte__cats', karte);
+    const tools = $('.karte__tools', karte);
+    const search = $('.karte__search input', karte);
+    const empty = $('.karte__empty', karte);
+    const norm = (str) => str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    cats.forEach((c) => $$('.gericht', c).forEach((g, i) => {
+      g.style.setProperty('--i', i);
+      g.dataset.text = norm(g.textContent);
+    }));
+
+    const showCat = (tab, scrollToList) => {
+      if (search.value) { search.value = ''; runSearch(); }
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      cats.forEach((c) => c.classList.toggle('is-active', c.id === tab.getAttribute('aria-controls')));
+      // Aktiven Tab in der Leiste sichtbar machen, ohne die Seite zu verschieben
+      tabBar.scrollTo({ left: tab.offsetLeft - tabBar.clientWidth / 2 + tab.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+      if (scrollToList) {
+        const offset = tools.getBoundingClientRect().bottom + 12;
+        const top = catsWrap.getBoundingClientRect().top;
+        if (top < offset - 1) scrollTo({ top: scrollY + top - offset, behavior: reduce ? 'auto' : 'smooth' });
+      }
+      measure();
+    };
+
+    const runSearch = () => {
+      const q = norm(search.value.trim());
+      const searching = q.length > 0;
+      catsWrap.classList.toggle('is-searching', searching);
+      tabBar.classList.toggle('is-dim', searching);
+      let hits = 0;
+      cats.forEach((c) => {
+        let catHits = 0;
+        $$('.gericht', c).forEach((g) => {
+          const ok = !searching || g.dataset.text.includes(q);
+          g.classList.toggle('is-hidden', !ok);
+          if (ok) catHits++;
+        });
+        c.classList.toggle('no-hits', searching && catHits === 0);
+        hits += catHits;
+      });
+      empty.hidden = !searching || hits > 0;
+      measure();
+    };
+
+    tabs.forEach((t) => t.addEventListener('click', () => showCat(t, true)));
+    tabBar.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const i = tabs.indexOf(document.activeElement);
+      if (i < 0) return;
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+      next.focus();
+      showCat(next, false);
+    });
+    search.addEventListener('input', runSearch);
+  }
+
   /* ---------- Jahr im Footer ---------- */
   const yearEl = $('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

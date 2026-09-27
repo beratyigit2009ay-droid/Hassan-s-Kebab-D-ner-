@@ -693,77 +693,177 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
 
 /* ---------- Die ganze Karte ---------- */
 .karte { padding: clamp(40px, 8vh, 100px) 0 0; }
-.karte__grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: clamp(16px, 2vw, 28px);
+.karte__intro { color: var(--muted); max-width: 56ch; margin-top: 18px; }
+.karte__panel {
   max-width: calc(var(--maxw) + 2 * var(--pad));
   margin: 0 auto;
   padding: 0 var(--pad);
-  align-items: start;
 }
-.karte__col { display: grid; gap: clamp(16px, 2vw, 28px); }
-.karte__group {
-  padding: clamp(22px, 3vw, 36px);
-  border-radius: var(--radius);
-  background: linear-gradient(160deg, var(--bg-3), var(--bg-2));
-  border: 1px solid var(--line);
-}
-.karte__cat {
+.karte__tools {
+  position: sticky;
+  top: 86px;
+  z-index: 20;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-  text-transform: uppercase;
-  color: var(--fry);
-  margin-bottom: 10px;
+  gap: 10px;
+  margin: 0 -10px 24px;
+  padding: 10px;
+  border-radius: 24px;
+  background: rgba(22, 16, 11, .86);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(16px) saturate(1.3);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  transition: top .5s var(--ease-out);
 }
-.karte__cat::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-.karte__list { list-style: none; margin: 0; padding: 0; }
-.karte__list li {
+.nav.is-hidden ~ main .karte__tools { top: 10px; }
+.no-js .karte__tools { display: none; }
+.karte__tabs {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-padding-inline: 10px;
+  -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, #000 92%, transparent);
+}
+.karte__tabs::-webkit-scrollbar { display: none; }
+.karte__tab {
+  flex: none;
+  padding: .62em 1.05em;
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 800;
+  white-space: nowrap;
+  color: var(--muted);
+  background: rgba(255, 243, 227, .05);
+  border: 1px solid var(--line);
+  transition: color .3s, background .3s, border-color .3s, opacity .3s;
+}
+.karte__tab span { margin-left: .45em; font-size: .78em; opacity: .6; }
+.karte__tab:hover { color: var(--cream); border-color: rgba(255, 243, 227, .3); }
+.karte__tab[aria-selected="true"] { color: var(--bg); background: var(--fry); border-color: var(--fry); }
+.karte__tabs.is-dim .karte__tab { opacity: .45; }
+.karte__search {
+  flex: 0 0 230px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: .6em 1em;
+  border-radius: 999px;
+  color: var(--dim);
+  background: rgba(255, 243, 227, .06);
+  border: 1px solid var(--line);
+  transition: border-color .3s;
+}
+.karte__search:focus-within { border-color: var(--fry); color: var(--fry); }
+.karte__search svg { width: 16px; height: 16px; flex: none; }
+.karte__search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: var(--cream);
+  font: inherit;
+  font-size: .92rem;
+}
+.karte__search input::placeholder { color: var(--dim); }
+
+.kat { margin-bottom: 40px; }
+.js .karte__cats:not(.is-searching) .kat:not(.is-active) { display: none; }
+.karte__cats.is-searching .kat.no-hits { display: none; }
+.kat__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-bottom: 6px; }
+.kat__head h3 { font-size: clamp(1.5rem, 2.8vw, 2.3rem); text-transform: uppercase; color: var(--fry); }
+.kat__note { color: var(--muted); font-size: .92rem; }
+.kat__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  gap: 2px;
-  padding: 14px 0;
-  border-bottom: 1px dashed rgba(255, 243, 227, .14);
-  transition: padding-left .4s var(--ease-out);
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(24px, 4vw, 64px);
 }
-.karte__list li:last-child { border-bottom: 0; padding-bottom: 0; }
-.karte__list li:hover { padding-left: 8px; }
-.karte__name {
+.gericht {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding: 16px 0;
+  border-bottom: 1px dashed rgba(255, 243, 227, .14);
+}
+.gericht.is-hidden { display: none; }
+.gericht__nr { padding-top: .28em; font-family: var(--font-display); font-weight: 700; font-size: .8rem; color: var(--sauce); }
+.gericht--extra .gericht__nr { font-size: 1rem; padding-top: 0; }
+.gericht__name {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 6px 10px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-size: clamp(.95rem, 1.2vw, 1.08rem);
+  line-height: 1.25;
   text-transform: uppercase;
 }
-.karte__desc { color: var(--muted); font-size: .92rem; line-height: 1.45; }
-.karte__badge {
-  padding: .35em .75em;
+.gericht__desc { display: block; margin-top: 3px; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.gericht__allergene { display: block; margin-top: 4px; color: var(--dim); font-size: .72rem; letter-spacing: .05em; }
+.gericht__preis {
+  padding-top: .1em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(.98rem, 1.2vw, 1.1rem);
+  color: var(--fry);
+  text-align: right;
+  white-space: nowrap;
+}
+.gericht__preis--sizes { display: grid; gap: 4px; }
+.gericht__preis small { font-family: var(--font-body); font-size: .75rem; font-weight: 700; color: var(--muted); }
+.tag {
+  padding: .32em .7em;
   border-radius: 999px;
   font-family: var(--font-body);
-  font-size: .68rem;
+  font-size: .66rem;
   font-weight: 800;
-  letter-spacing: .04em;
+  letter-spacing: .03em;
   text-transform: none;
-  background: var(--sauce);
-  color: #fff;
+  white-space: nowrap;
 }
+.tag--veg { color: #7be3a8; background: rgba(61, 220, 132, .12); border: 1px solid rgba(61, 220, 132, .35); }
+.tag--hot { color: #ff8a6c; background: rgba(255, 61, 31, .12); border: 1px solid rgba(255, 61, 31, .4); }
+.tag--star { color: #fff; background: var(--sauce); }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.js .kat.is-active .gericht, .js .karte__cats.is-searching .gericht { animation: rise .55s var(--ease-out) both; animation-delay: calc(min(var(--i, 0), 18) * 22ms); }
+.karte__empty { padding: 40px 0; text-align: center; color: var(--muted); font-weight: 700; }
+.karte__empty a { color: var(--cream); border-bottom: 2px solid var(--fry); }
 .karte__more {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   max-width: calc(var(--maxw) + 2 * var(--pad));
-  margin: clamp(20px, 3vw, 32px) auto 0;
+  margin: 8px auto 0;
   padding: 0 var(--pad);
   color: var(--muted);
-  font-weight: 700;
+  font-size: .9rem;
 }
-.karte__more svg { flex: none; width: 22px; height: 22px; color: var(--fry); animation: spin 8s linear infinite; }
+.karte__more svg { flex: none; width: 20px; height: 20px; margin-top: 2px; color: var(--fry); animation: spin 8s linear infinite; }
 .karte__more a { color: var(--cream); white-space: nowrap; border-bottom: 2px solid var(--fry); }
 .karte__more a:hover { color: var(--fry); }
+
+.card__price {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: .4em .85em;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: .85rem;
+  color: var(--bg);
+  background: var(--fry);
+}
+.drink__price { display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 10px; font-family: var(--font-display); font-weight: 700; font-size: .85rem; color: var(--fry) !important; }
+.drink__price span { white-space: nowrap; }
 
 /* ---------- Statement ---------- */
 .statement {
@@ -1176,13 +1276,16 @@ html.is-loaded .loader__inner { opacity: 0; transform: translateY(-30px); transi
   .card, .card--star { width: 80vw; height: auto; aspect-ratio: 3 / 4.2; scroll-snap-align: center; }
 
   .drinks__grid { grid-template-columns: 1fr; }
-  .karte__grid { grid-template-columns: minmax(0, 1fr); }
-  .karte__more { align-items: flex-start; }
+  .karte__tools { top: 72px; flex-direction: column-reverse; align-items: stretch; margin: 0 -8px 18px; padding: 8px; border-radius: 20px; }
+  .karte__search { flex: none; }
+  .kat__list { grid-template-columns: minmax(0, 1fr); }
+  .gericht { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; padding: 14px 0; }
   .bottle { width: 50px; height: 96px; margin-bottom: 14px; }
   .bottle::before { width: 20px; height: 40px; }
   .bottle::after { width: 24px; height: 9px; bottom: calc(100% + 34px); }
   .drink { display: grid; grid-template-columns: 110px 1fr; grid-template-rows: auto auto; column-gap: 18px; align-items: center; padding: 18px; }
-  .drink__stage { grid-row: 1 / 3; height: 180px; }
+  .drink__stage { grid-row: 1 / 4; height: 180px; }
+  .drink > :not(.drink__stage) { grid-column: 2; }
   .drink h3 { margin: 0 0 6px; align-self: end; }
   .drink p { align-self: start; }
   .can { width: 62px; height: 118px; margin-bottom: 14px; }
