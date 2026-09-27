@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="de" class="no-js is-loaded">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Speisekarte – Hasan's Döner · Pizza · Kebab, Bad Schussenried</title>
+  <meta name="description" content="Die ganze Speisekarte von Hasan's Döner-Pizza-Kebab in Bad Schussenried: Döner, Dürüm, Lahmacun, Pide, Steinofen-Pizza, Calzone, Salate, Snacks und Getränke – mit Preisen.">
+  <meta name="theme-color" content="#0e0a07">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Speisekarte – Hasan's in Bad Schussenried">
+  <meta property="og:description" content="Über 100 Gerichte mit Preisen: Döner, Dürüm, Pide, Lahmacun, Steinofen-Pizza und mehr.">
+  <meta property="og:image" content="assets/img/og-pom-doener.jpg">
+  <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body class="page-karte">
+
+  <!-- Wiederverwendbare Grafiken -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-fry" x1="0" x2="1">
+        <stop offset="0" stop-color="#e99d12"/>
+        <stop offset=".45" stop-color="#ffd84f"/>
+        <stop offset="1" stop-color="#dc8f0c"/>
+      </linearGradient>
+      <linearGradient id="g-bread" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f3bd6a"/>
+        <stop offset="1" stop-color="#c47a35"/>
+      </linearGradient>
+      <linearGradient id="g-spit-shade" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".6"/>
+        <stop offset=".3" stop-color="#000" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#fff" stop-opacity=".16"/>
+        <stop offset=".72" stop-color="#000" stop-opacity="0"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".65"/>
+      </linearGradient>
+      <clipPath id="clip-spit">
+        <path d="M28 64q72-22 144 0l-24 230q-48 16-96 0z"/>
+      </clipPath>
+      <pattern id="p-spit" width="60" height="10" patternUnits="userSpaceOnUse">
+        <rect width="22" height="10" fill="#9b4f24"/>
+        <rect x="22" width="12" height="10" fill="#743617"/>
+        <rect x="34" width="18" height="10" fill="#b8672f"/>
+        <rect x="52" width="8" height="10" fill="#652f13"/>
+      </pattern>
+    </defs>
+    <symbol id="i-fry" viewBox="0 0 24 120">
+      <rect x="2" y="2" width="20" height="116" rx="6" fill="url(#g-fry)"/>
+      <rect x="7" y="10" width="3.5" height="92" rx="1.75" fill="#fff5c4" opacity=".6"/>
+      <path d="M2 106c6 6 14 6 20 0v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6z" fill="#b8690a" opacity=".5"/>
+    </symbol>
+    <symbol id="i-corn" viewBox="0 0 30 30">
+      <path d="M15 2c9 0 13 8 12 15-1 8-7 11-12 11S4 25 3 17C2 10 6 2 15 2z" fill="#ffcd2e"/>
+      <ellipse cx="11" cy="10" rx="4" ry="3" fill="#fff3b5" opacity=".7"/>
+    </symbol>
+    <symbol id="i-drop" viewBox="0 0 30 34">
+      <path d="M15 1S3 16 3 22a12 12 0 0 0 24 0C27 16 15 1 15 1z" fill="#ff3d1f"/>
+      <ellipse cx="10" cy="22" rx="3" ry="5" fill="#fff" opacity=".35"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 0c1 7 5 11 12 12-7 1-11 5-12 12-1-7-5-11-12-12 7-1 11-5 12-12z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-spit" viewBox="0 0 200 360">
+      <rect x="96" y="6" width="8" height="346" rx="4" fill="#d6cdc2"/>
+      <circle cx="100" cy="12" r="10" fill="#efe7dc"/>
+      <g clip-path="url(#clip-spit)">
+        <g class="spit__bands">
+          <rect x="-120" y="40" width="440" height="270" fill="url(#p-spit)"/>
+        </g>
+        <path d="M30 95q70-14 140 0M34 130q66-13 132 0M38 165q62-12 124 0M42 200q58-11 116 0M46 235q54-10 108 0M50 270q50-9 100 0" stroke="#4a210c" stroke-width="2.5" fill="none" opacity=".3"/>
+        <rect x="0" y="40" width="200" height="270" fill="url(#g-spit-shade)"/>
+      </g>
+      <ellipse cx="100" cy="64" rx="72" ry="13" fill="#c2733a"/>
+      <ellipse cx="100" cy="62" rx="60" ry="8" fill="#d98c4c" opacity=".6"/>
+      <rect x="74" y="330" width="52" height="14" rx="5" fill="#8f857b"/>
+    </symbol>
+  </svg>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="nav__logo" href="index.html" aria-label="Hasan's – zur Startseite">
+      <svg class="nav__spit" aria-hidden="true"><use href="#i-spit"/></svg>
+      <span>HASAN'S</span>
+    </a>
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="index.html#pom-doener">Pom Döner</a>
+      <a href="index.html#menu">Klassiker</a>
+      <a href="speisekarte.html" aria-current="page">Speisekarte</a>
+      <a href="index.html#getraenke">Getränke</a>
+      <a href="index.html#galerie">Galerie</a>
+      <a href="index.html#besuch">Besuch</a>
+    </nav>
+    <a class="btn btn--small btn--primary nav__cta" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Route ↗</a>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" inert>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html" style="--i:0">Startseite</a>
+      <a href="speisekarte.html" style="--i:1" aria-current="page">Speisekarte</a>
+      <a href="index.html#pom-doener" style="--i:2">Pom Döner</a>
+      <a href="index.html#getraenke" style="--i:3">Getränke</a>
+      <a href="index.html#galerie" style="--i:4">Galerie</a>
+      <a href="index.html#besuch" style="--i:5">Besuch</a>
+    </nav>
+    <p class="mobile-menu__foot">Zeppelinstraße 8 · Bad Schussenried<br><a href="tel:+497583926440">07583 926440</a></p>
+  </div>
+
+  <main id="top">
+    <header class="page-head">
+      <div class="page-head__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--3"></span>
+      </div>
+      <a class="page-head__back" href="index.html" style="--d:0">← Zur Startseite</a>
+      <p class="eyebrow" style="--d:1"><span class="pulse"></span> Hasan's Döner · Pizza · Kebab — Bad Schussenried</p>
+      <h1 class="page-head__title" style="--d:2">Speise<em>karte</em></h1>
+      <p class="page-head__lead" style="--d:3">Über 100 Gerichte – Döner, Dürüm, Lahmacun, Pide, Steinofen-Pizza und vieles mehr. Kategorie antippen oder direkt suchen.</p>
+      <div class="page-head__info" style="--d:4">
+        <p class="open-status" data-open-status><span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span></p>
+        <span class="chip chip--key">Bar- &amp; Kartenzahlung</span>
+        <a class="chip" href="tel:+497583926440">Anrufen: 07583 926440</a>
+        <a class="chip" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Zeppelinstraße 8 ↗</a>
+      </div>
+    </header>
+
+    <section class="karte karte--full" aria-label="Speisekarte">
+      <div class="karte__panel">
+        <div class="karte__tools">
+          <nav class="karte__tabs" aria-label="Kategorien">
+            <a class="karte__tab" href="#kat-doener">Döner<span>5</span></a>
+            <a class="karte__tab" href="#kat-box">Boxen<span>3</span></a>
+            <a class="karte__tab" href="#kat-duerum">Dürüm<span>3</span></a>
+            <a class="karte__tab" href="#kat-back">Back Kebap<span>1</span></a>
+            <a class="karte__tab" href="#kat-teller">Teller<span>4</span></a>
+            <a class="karte__tab" href="#kat-lahmacun">Lahmacun<span>3</span></a>
+            <a class="karte__tab" href="#kat-pide">Pide<span>11</span></a>
+            <a class="karte__tab" href="#kat-pizza">Pizza<span>46</span></a>
+            <a class="karte__tab" href="#kat-calzone">Calzone<span>7</span></a>
+            <a class="karte__tab" href="#kat-falafel">Falafel<span>3</span></a>
+            <a class="karte__tab" href="#kat-salat">Salate<span>5</span></a>
+            <a class="karte__tab" href="#kat-snacks">Snacks<span>9</span></a>
+            <a class="karte__tab" href="#kat-pommes">Pommes<span>2</span></a>
+            <a class="karte__tab" href="#kat-suesses">Süßes<span>1</span></a>
+            <a class="karte__tab" href="#kat-getraenke">Getränke<span>6</span></a>
+          </nav>
+          <label class="karte__search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <input type="search" placeholder="Suchen, z. B. Hawaii" aria-label="Speisekarte durchsuchen" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="karte__cats">
+        <section class="kat" id="kat-doener" aria-label="Döner im Fladenbrot">
+          <div class="kat__head"><h2>Döner im Fladenbrot</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">01</span><div class="gericht__info"><span class="gericht__name">Im Fladenbrot</span><span class="gericht__desc">mit Salat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">02</span><div class="gericht__info"><span class="gericht__name">Im Fladenbrot</span><span class="gericht__desc">mit Weichkäse, Salat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">8,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">03</span><div class="gericht__info"><span class="gericht__name">Vegetarisches Fladenbrot <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Salat und Soße</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">04</span><div class="gericht__info"><span class="gericht__name">Halloumi <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">im Fladenbrot mit gegrilltem Käse</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">05</span><div class="gericht__info"><span class="gericht__name">Pom Drehspieß <span class="tag tag--star">Pom Döner · Hausspezialität</span></span><span class="gericht__desc">im Fladenbrot mit Pommes</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">9,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-box" aria-label="Box zum Mitnehmen">
+          <div class="kat__head"><h2>Box zum Mitnehmen</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">07</span><div class="gericht__info"><span class="gericht__name">Dönerbox</span><span class="gericht__desc">mit Drehspieß und Pommes</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">08</span><div class="gericht__info"><span class="gericht__name">Falafel-Box <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Salat</span><span class="gericht__allergene">A, C, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">09</span><div class="gericht__info"><span class="gericht__name">Nuggets-Box</span><span class="gericht__desc">5 Stück, mit Salat und Pommes</span><span class="gericht__allergene">A, C, G</span></div><span class="gericht__preis">7,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-duerum" aria-label="Dürüm Kebap">
+          <div class="kat__head"><h2>Dürüm Kebap</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">11</span><div class="gericht__info"><span class="gericht__name">Dürüm Vegetarisch <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Salat und Soße</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">12</span><div class="gericht__info"><span class="gericht__name">Dürüm Vegetarisch <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Käse</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">13</span><div class="gericht__info"><span class="gericht__name">Dürüm</span><span class="gericht__desc">mit Drehspieß, Salat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">9,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-back" aria-label="Back Kebap">
+          <div class="kat__head"><h2>Back Kebap</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">14</span><div class="gericht__info"><span class="gericht__name">Back Kebap</span><span class="gericht__desc">Die Kebap-Tasche – mit Drehspieß</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">10,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-teller" aria-label="Drehspieß Teller">
+          <div class="kat__head"><h2>Drehspieß Teller</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">16</span><div class="gericht__info"><span class="gericht__name">Drehspieß Teller</span><span class="gericht__desc">wahlweise mit Reis, Pommes oder Salat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">13,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">17</span><div class="gericht__info"><span class="gericht__name">Drehspieß Teller</span><span class="gericht__desc">überbacken</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">13,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">18</span><div class="gericht__info"><span class="gericht__name">Iskender Teller</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">13,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">19</span><div class="gericht__info"><span class="gericht__name">Fladenbrot</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">1,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-lahmacun" aria-label="Lahmacun">
+          <div class="kat__head"><h2>Lahmacun</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">20</span><div class="gericht__info"><span class="gericht__name">Lahmacun</span><span class="gericht__desc">mit Salat und Soße</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">7,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">21</span><div class="gericht__info"><span class="gericht__name">Lahmacun Spezial</span><span class="gericht__desc">mit Drehspieß, Salat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">22</span><div class="gericht__info"><span class="gericht__name">Lahmacun Spezial</span><span class="gericht__desc">mit Drehspieß, Käsesalat und Soße</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">10,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-pide" aria-label="Pide">
+          <div class="kat__head"><h2>Pide</h2><p class="kat__note">Teig aus Weizenmehl</p></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">28</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Edamer</span><span class="gericht__allergene">A</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">29</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit gewürztem Hackfleisch</span><span class="gericht__allergene">A</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">30</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Weichkäse</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">31</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Rindersalami und Käse</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">32</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Hackfleisch, Käse und Ei</span><span class="gericht__allergene">A, C, G</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">33</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Putenschinken und Käse</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">34</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Putenschinken, Käse und Ei</span><span class="gericht__allergene">A, C, G, 3, 5, 6, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">35</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Sucuk und Ei</span><span class="gericht__allergene">A, C, 2, 3, 5</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">36</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Spinat, Käse und Ei</span><span class="gericht__allergene">A, C, G</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">37</span><div class="gericht__info"><span class="gericht__name">Pide</span><span class="gericht__desc">mit Drehspieß</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">38</span><div class="gericht__info"><span class="gericht__name">Pide des Hauses <span class="tag tag--hot">scharf</span></span><span class="gericht__desc">mit Drehspieß, Pilzen, Zwiebeln und Peperoni</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">12,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-pizza" aria-label="Steinofen-Pizza">
+          <div class="kat__head"><h2>Steinofen-Pizza</h2><p class="kat__note">Alle Pizzen mit Tomatensoße und Käse · Teig aus Weizenmehl</p></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">39</span><div class="gericht__info"><span class="gericht__name">Pizzabrot</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">7,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">40</span><div class="gericht__info"><span class="gericht__name">Margherita</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">41</span><div class="gericht__info"><span class="gericht__name">Zwiebeln</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">42</span><div class="gericht__info"><span class="gericht__name">Peperoni</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">43</span><div class="gericht__info"><span class="gericht__name">Ananas</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">44</span><div class="gericht__info"><span class="gericht__name">Paprika</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">45</span><div class="gericht__info"><span class="gericht__name">Champignon</span><span class="gericht__desc">mit frischen Pilzen</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">46</span><div class="gericht__info"><span class="gericht__name">Bolognese</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">47</span><div class="gericht__info"><span class="gericht__name">Gorgonzola</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">48</span><div class="gericht__info"><span class="gericht__name">Athena</span><span class="gericht__desc">mit Weichkäse, Spinat, Pilzen und Zwiebeln</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">49</span><div class="gericht__info"><span class="gericht__name">Rindersalami</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">50</span><div class="gericht__info"><span class="gericht__name">Diavolo</span><span class="gericht__desc">mit Rindersalami und Peperoni</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">51</span><div class="gericht__info"><span class="gericht__name">Sardellen</span><span class="gericht__desc">mit Oliven und Zwiebeln</span><span class="gericht__allergene">A, G, D, 9</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">52</span><div class="gericht__info"><span class="gericht__name">Putenschinken</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">53</span><div class="gericht__info"><span class="gericht__name">Pizza</span><span class="gericht__desc">mit Drehspieß</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">54</span><div class="gericht__info"><span class="gericht__name">Mozzarella und Tomaten</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">55</span><div class="gericht__info"><span class="gericht__name">Sofia Loren</span><span class="gericht__desc">mit Putenschinken und Ei</span><span class="gericht__allergene">A, C, G, 3, 5, 6, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">56</span><div class="gericht__info"><span class="gericht__name">Thunfisch</span><span class="gericht__desc">mit Zwiebeln</span><span class="gericht__allergene">A, G, D</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">57</span><div class="gericht__info"><span class="gericht__name">Sucuk</span><span class="gericht__desc">mit türkischer Knoblauchwurst</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">58</span><div class="gericht__info"><span class="gericht__name">Ala Turka</span><span class="gericht__desc">mit Sucuk, Döner, Salami, Oliven, Peperoni und Zwiebeln</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7, 9</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">59</span><div class="gericht__info"><span class="gericht__name">Vegetarisch <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Spinat, Artischocken, Pilzen und Paprika</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">60</span><div class="gericht__info"><span class="gericht__name">Putenschinken</span><span class="gericht__desc">mit Champignons</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">61</span><div class="gericht__info"><span class="gericht__name">Rindersalami</span><span class="gericht__desc">mit Champignons</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">62</span><div class="gericht__info"><span class="gericht__name">Rindersalami und Putenschinken</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">63</span><div class="gericht__info"><span class="gericht__name">Hawaii</span><span class="gericht__desc">mit Putenschinken und Ananas</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">64</span><div class="gericht__info"><span class="gericht__name">Rindersalami</span><span class="gericht__desc">mit Rindersalami, Pilzen und Paprika</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">65</span><div class="gericht__info"><span class="gericht__name">Santa Lucia</span><span class="gericht__desc">mit Rindersalami, Pilzen, Paprika und Ei</span><span class="gericht__allergene">A, G, C, 2, 3, 5, 7</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">66</span><div class="gericht__info"><span class="gericht__name">4 Jahreszeiten</span><span class="gericht__desc">mit Thunfisch, Pilzen, Rindersalami und Paprika</span><span class="gericht__allergene">A, G, D, 2, 3, 5, 7</span></div><span class="gericht__preis">11,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">67</span><div class="gericht__info"><span class="gericht__name">Neapel</span><span class="gericht__desc">mit Thunfisch, Pilzen und Paprika</span><span class="gericht__allergene">A, G, D</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">68</span><div class="gericht__info"><span class="gericht__name">Art des Hauses</span><span class="gericht__desc">mit Drehspieß, Pilzen, Peperoni und Zwiebeln</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">69</span><div class="gericht__info"><span class="gericht__name">Spezial</span><span class="gericht__desc">mit Putenschinken, Pilzen und Peperoni</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">71</span><div class="gericht__info"><span class="gericht__name">Deutschland Pizza</span><span class="gericht__desc">mit Drehspieß, Bratkartoffeln und Zwiebeln</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">11,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">72</span><div class="gericht__info"><span class="gericht__name">Formaggi</span><span class="gericht__desc">mit Weichkäse, Gorgonzola, Edamer und Mozzarella</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">73</span><div class="gericht__info"><span class="gericht__name">Mailand</span><span class="gericht__desc">mit Putenschinken, Paprika, Oliven und Rindersalami</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7, 9</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">74</span><div class="gericht__info"><span class="gericht__name">Vulkano <span class="tag tag--hot">scharf</span></span><span class="gericht__desc">mit scharfer Soße, Peperoni und Drehspießfleisch</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">75</span><div class="gericht__info"><span class="gericht__name">Mafioso <span class="tag tag--hot">scharf</span></span><span class="gericht__desc">mit Putenschinken, Paprika, Rindersalami, Peperoni, Zwiebeln und Knoblauch</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7, 9</span></div><span class="gericht__preis">11,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">76</span><div class="gericht__info"><span class="gericht__name">Mexicana</span><span class="gericht__desc">mit Dönerfleisch, Mais, Peperoni und Zwiebeln</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">11,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">77</span><div class="gericht__info"><span class="gericht__name">Roma</span><span class="gericht__desc">mit Mozzarella, Pilzen und Peperoni</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">78</span><div class="gericht__info"><span class="gericht__name">Bafko</span><span class="gericht__desc">mit Pilzen, Peperoni, Oliven und Knoblauch</span><span class="gericht__allergene">A, G, 9</span></div><span class="gericht__preis">10,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">79</span><div class="gericht__info"><span class="gericht__name">Hasans <span class="tag tag--hot">scharf</span></span><span class="gericht__desc">mit Drehspieß, Peperoni, Sucuk, Rindersalami, Pilzen, Zwiebeln und Knoblauch</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">80</span><div class="gericht__info"><span class="gericht__name">Manhattan</span><span class="gericht__desc">mit Käserand, Weichkäse, Pilzen, Zwiebeln, Spinat und Knoblauch</span><span class="gericht__allergene">A, G, D</span></div><span class="gericht__preis">13,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">81</span><div class="gericht__info"><span class="gericht__name">Capri</span><span class="gericht__desc">mit Garnelen, Sardellen, Peperoni, Zwiebeln und Knoblauch</span><span class="gericht__allergene">A, B, G, D, N</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">82</span><div class="gericht__info"><span class="gericht__name">Kalabrien</span><span class="gericht__desc">mit Garnelen, Thunfisch, Zwiebeln und Knoblauch</span><span class="gericht__allergene">A, B, G, D, N</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">83</span><div class="gericht__info"><span class="gericht__name">Talha</span><span class="gericht__desc">mit Döner, Kapern, Pepr. und Zwiebeln</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7</span></div><span class="gericht__preis">12,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">84</span><div class="gericht__info"><span class="gericht__name">Urfa Pizza</span><span class="gericht__desc">mit Dönerfleisch, Oliven, Peperoni, Zwiebeln, frischen Tomaten und Soße</span><span class="gericht__allergene">A, G, 2, 3, 5, 6, 7, 9</span></div><span class="gericht__preis">13,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">85</span><div class="gericht__info"><span class="gericht__name">Familienpizza</span><span class="gericht__desc">60 × 40 cm mit 3 Zutaten</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">30,00 €</span></li>
+              <li class="gericht gericht--extra"><span class="gericht__nr">+</span><div class="gericht__info"><span class="gericht__name">Jede weitere Beilage</span><span class="gericht__desc">zur Familienpizza</span></div><span class="gericht__preis">2,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-calzone" aria-label="Calzone">
+          <div class="kat__head"><h2>Calzone</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">107</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit Käse und Knoblauch</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">108</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit Putenschinken und Käse</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">109</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit Rindersalami und Käse</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">110</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit Champignons</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">111</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit türkischer Knoblauchwurst</span><span class="gericht__allergene">A, G, 2, 3, 5, 7</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">112</span><div class="gericht__info"><span class="gericht__name">Calzone Vegetarisch <span class="tag tag--veg">vegetarisch</span></span><span class="gericht__desc">mit Spinat, Artischocken und Pilzen</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">113</span><div class="gericht__info"><span class="gericht__name">Calzone</span><span class="gericht__desc">mit Drehspieß</span><span class="gericht__allergene">A, C, G, F, J, 6, 7, 8</span></div><span class="gericht__preis">11,00 €</span></li>
+              <li class="gericht gericht--extra"><span class="gericht__nr">+</span><div class="gericht__info"><span class="gericht__name">Jede weitere Beilage</span></div><span class="gericht__preis">1,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-falafel" aria-label="Falafel">
+          <div class="kat__head"><h2>Falafel</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">25</span><div class="gericht__info"><span class="gericht__name">Falafel</span><span class="gericht__desc">im Fladenbrot, mit Salat und Soße</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">8,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">26</span><div class="gericht__info"><span class="gericht__name">Falafel</span><span class="gericht__desc">im Rollteig, mit Salat und Soße</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">9,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">27</span><div class="gericht__info"><span class="gericht__name">Falafel Teller</span><span class="gericht__desc">mit Pommes und Salat</span><span class="gericht__allergene">A, G</span></div><span class="gericht__preis">12,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-salat" aria-label="Salate">
+          <div class="kat__head"><h2>Salate</h2><p class="kat__note">mit hausgemachter Soße</p></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">87</span><div class="gericht__info"><span class="gericht__name">Gemischter Salat</span><span class="gericht__allergene">C, G, 4</span></div><span class="gericht__preis">7,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">88</span><div class="gericht__info"><span class="gericht__name">Hirtensalat</span><span class="gericht__desc">mit Weichkäse</span><span class="gericht__allergene">C, G, 4</span></div><span class="gericht__preis">7,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">89</span><div class="gericht__info"><span class="gericht__name">Mozzarella-Salat</span><span class="gericht__desc">mit Tomaten</span><span class="gericht__allergene">C, G, 4</span></div><span class="gericht__preis">7,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">90</span><div class="gericht__info"><span class="gericht__name">Thunfischsalat</span><span class="gericht__allergene">C, D, G, 4</span></div><span class="gericht__preis">7,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">91</span><div class="gericht__info"><span class="gericht__name">Salat</span><span class="gericht__desc">mit Putenfleisch</span><span class="gericht__allergene">A, G, 3, 5, 6, 7</span></div><span class="gericht__preis">9,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-snacks" aria-label="Snacks">
+          <div class="kat__head"><h2>Snacks</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">92</span><div class="gericht__info"><span class="gericht__name">Hamburger</span></div><span class="gericht__preis">5,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">93</span><div class="gericht__info"><span class="gericht__name">Hamburger Menü</span><span class="gericht__desc">mit Pommes und Getränk (0,33-l-Dose)</span></div><span class="gericht__preis">10,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">95</span><div class="gericht__info"><span class="gericht__name">Cheeseburger</span></div><span class="gericht__preis">6,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">96</span><div class="gericht__info"><span class="gericht__name">Cheeseburger Menü</span><span class="gericht__desc">mit Pommes und Getränk (0,33-l-Dose)</span></div><span class="gericht__preis">12,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">98</span><div class="gericht__info"><span class="gericht__name">Knuspriger Hähnchenburger</span><span class="gericht__allergene">3, A</span></div><span class="gericht__preis">5,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">99</span><div class="gericht__info"><span class="gericht__name">Chicken Nuggets</span><span class="gericht__desc">6 Stück</span><span class="gericht__allergene">3</span></div><span class="gericht__preis">6,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">100</span><div class="gericht__info"><span class="gericht__name">Chicken Nuggets</span><span class="gericht__desc">12 Stück</span><span class="gericht__allergene">3</span></div><span class="gericht__preis">9,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">101</span><div class="gericht__info"><span class="gericht__name">Chicken Nuggets Menü</span><span class="gericht__desc">9 Stück, mit Pommes und Getränk (0,33-l-Dose)</span><span class="gericht__allergene">3</span></div><span class="gericht__preis">13,00 €</span></li>
+              <li class="gericht"><span class="gericht__nr">102</span><div class="gericht__info"><span class="gericht__name">Chicken Wings</span><span class="gericht__desc">5 Stück, mit Pommes</span></div><span class="gericht__preis">7,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-pommes" aria-label="Pommes &amp; Bratkartoffeln">
+          <div class="kat__head"><h2>Pommes &amp; Bratkartoffeln</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">23</span><div class="gericht__info"><span class="gericht__name">Portion Pommes</span></div><span class="gericht__preis">4,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr">24</span><div class="gericht__info"><span class="gericht__name">Portion Bratkartoffeln</span></div><span class="gericht__preis">4,50 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-suesses" aria-label="Süßes">
+          <div class="kat__head"><h2>Süßes</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr">120</span><div class="gericht__info"><span class="gericht__name">Baklava</span><span class="gericht__desc">3 Stück</span></div><span class="gericht__preis">4,00 €</span></li>
+          </ul>
+        </section>
+        <section class="kat" id="kat-getraenke" aria-label="Getränke">
+          <div class="kat__head"><h2>Getränke</h2></div>
+          <ul class="kat__list">
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Cola, Fanta, Mezzo Mix, Sprite</span></div><span class="gericht__preis gericht__preis--sizes"><span><small>0,33 l</small> 2,50 €</span><span><small>0,5 l</small> 3,00 €</span></span></li>
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Apfelschorle, Mineralwasser</span></div><span class="gericht__preis gericht__preis--sizes"><span><small>0,33 l</small> 2,50 €</span><span><small>0,5 l</small> 3,00 €</span></span></li>
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Uludağ</span></div><span class="gericht__preis gericht__preis--sizes"><span><small>0,33 l</small> 2,50 €</span><span><small>0,5 l</small> 3,00 €</span></span></li>
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Tetra Pak</span></div><span class="gericht__preis">2,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Tee</span></div><span class="gericht__preis">1,50 €</span></li>
+              <li class="gericht"><span class="gericht__nr" aria-hidden="true"></span><div class="gericht__info"><span class="gericht__name">Tasse Kaffee</span></div><span class="gericht__preis">2,50 €</span></li>
+          </ul>
+        </section>
+          <p class="karte__empty" hidden>Nichts gefunden. Frag uns gern: <a href="tel:+497583926440">07583 926440</a></p>
+        </div>
+      </div>
+
+      <p class="karte__more">
+        <svg aria-hidden="true"><use href="#i-spark"/></svg>
+        <span>Alle Preise in Euro inkl. MwSt. · Bar- und Kartenzahlung. Buchstaben und Zahlen hinter den Gerichten stehen für Allergene und Zusatzstoffe – die Erklärung bekommst du bei uns im Laden. Fragen? <a href="tel:+497583926440">07583 926440</a></span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer__big" href="index.html" aria-label="Zur Startseite">HASAN'S</a>
+    <div class="footer__row">
+      <p>© <span data-year>2026</span> Hasan's Döner · Pizza · Kebab — Zeppelinstraße 8, 88427 Bad Schussenried · <a href="tel:+497583926440">07583 926440</a></p>
+      <a href="#top" class="footer__top">Nach oben ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js?v=5" defer></script>
+  <script src="assets/js/speisekarte.js?v=5" defer></script>
+</body>
+</html>
