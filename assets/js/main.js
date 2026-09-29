@@ -137,7 +137,7 @@
     if (!menu.enabled) {
       menu.el.style.height = '';
       menu.track.style.transform = '';
-      menu.cards.forEach((c) => $('img', c).style.removeProperty('--px'));
+      menu.cards.forEach((c) => $('img', c)?.style.removeProperty('--px'));
       return;
     }
     menu.dist = Math.max(0, menu.track.scrollWidth - vw);
@@ -155,7 +155,7 @@
     menu.cards.forEach((card) => {
       const r = card.getBoundingClientRect();
       const offset = (r.left + r.width / 2 - vw / 2) / vw;
-      $('img', card).style.setProperty('--px', `${(offset * -40).toFixed(1)}px`);
+      $('img', card)?.style.setProperty('--px', `${(offset * -40).toFixed(1)}px`);
     });
   };
 
@@ -182,7 +182,7 @@
   };
 
   /* ---------- Hero-Parallax ---------- */
-  const hero = { el: $('.hero'), frame: $('.hero__frame'), content: $('.hero__content'), floaters: $$('.floater') };
+  const hero = { el: $('.hero'), frame: $('.hero__spit'), content: $('.hero__content'), floaters: $$('.floater') };
   const resetHeroScroll = () => {
     hero.frame.style.translate = '';
     hero.content.style.translate = '';

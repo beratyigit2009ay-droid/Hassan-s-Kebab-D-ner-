@@ -95,6 +95,13 @@
   };
   search.addEventListener('input', runSearch);
 
+  /* ---------- Suche per Link vorbelegen, z. B. speisekarte.html?suche=vegetarisch ---------- */
+  const preset = new URLSearchParams(location.search).get('suche');
+  if (preset) {
+    search.value = preset;
+    requestAnimationFrame(runSearch);
+  }
+
   /* ---------- Klick auf Kategorie: hinspringen ---------- */
   tabs.forEach((t) => t.addEventListener('click', (e) => {
     const target = document.getElementById(t.hash.slice(1));
