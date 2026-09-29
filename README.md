@@ -52,13 +52,21 @@ python3 -m http.server 8000
 
 - Name von Pizza Nr. 70 (fehlt in der Karte, daher noch nicht auf der Seite)
 - Erklärung der Allergen-/Zusatzstoff-Kürzel (A, C, G … / 2, 3, 5 …)
-- **Impressum** und **Datenschutzerklärung** – für eine geschäftliche Website in Deutschland Pflicht
+
+Impressum und Datenschutz werden aus einem Skript erzeugt; fehlende Angaben würden dort
+als `<span class="fehlt">` gelb markiert (aktuell keine).
+
+Die Datenschutzerklärung beschreibt nur, was die Website tatsächlich tut: keine Cookies,
+kein Tracking, keine eingebetteten Drittinhalte, Schriften lokal, Hosting über GitHub Pages.
+Wird später etwas Externes eingebunden (z. B. Karte, Analyse, Formular), muss sie angepasst werden.
 
 ## Struktur
 
 ```
 index.html                  Startseite
 speisekarte.html            Speisekarte (eigene Seite)
+impressum.html              Impressum
+datenschutz.html            Datenschutzerklärung
 assets/css/style.css        Design & Animationen (beide Seiten)
 assets/js/common.js         Navigation, Live-Status, Fortschrittsbalken (beide Seiten)
 assets/js/main.js           Animationen der Startseite

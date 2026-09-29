@@ -965,6 +965,42 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
 .chip--key { color: var(--bg); background: var(--fry); border-color: var(--fry); }
 .karte--full { padding-top: 0; }
 
+/* ---------- Impressum & Datenschutz ---------- */
+.page-head--legal { padding-bottom: clamp(20px, 4vh, 40px); }
+.page-head--legal .page-head__title { font-size: clamp(2.2rem, 8vw, 6.4rem); }
+.legal {
+  max-width: calc(820px + 2 * var(--pad));
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(60px, 10vh, 120px);
+}
+.legal section { padding: clamp(22px, 3vw, 32px) 0; border-top: 1px solid var(--line); }
+.legal h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--fry);
+}
+.legal p, .legal li { color: var(--muted); line-height: 1.7; }
+.legal p + p, .legal ul + p, .legal p + ul { margin-top: 12px; }
+.legal ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.legal li::marker { color: var(--sauce); }
+.legal strong { color: var(--cream); }
+.legal a { color: var(--cream); font-weight: 700; border-bottom: 2px solid var(--fry); overflow-wrap: anywhere; transition: color .3s; }
+.legal a:hover { color: var(--fry); }
+.legal__stand { font-size: .85rem; color: var(--dim) !important; }
+/* Noch fehlende Angaben: gut sichtbar markiert */
+.fehlt {
+  display: inline;
+  padding: .1em .45em;
+  border-radius: 6px;
+  color: var(--bg);
+  background: var(--fry);
+  font-weight: 800;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 .card__price {
   display: inline-block;
   margin-bottom: 12px;
@@ -1337,6 +1373,15 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
   font-size: .85rem;
 }
 .footer__row a[href^="tel:"] { color: var(--muted); }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.footer__legal a {
+  font-weight: 800;
+  color: var(--cream);
+  border-bottom: 2px solid var(--fry);
+  padding-bottom: 1px;
+  transition: color .3s;
+}
+.footer__legal a:hover, .footer__legal a[aria-current="page"] { color: var(--fry); }
 .footer__top { font-weight: 800; color: var(--muted); transition: color .3s; }
 .footer__top:hover { color: var(--fry); }
 
