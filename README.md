@@ -50,15 +50,25 @@ python3 -m http.server 8000
 
 ## Noch einzutragen
 
+Auf `impressum.html` und `datenschutz.html` sind fehlende Angaben gelb markiert (`<span class="fehlt">`):
+
+- Vollständiger Name der Inhaberin / des Inhabers (bzw. Firma mit Rechtsform und Vertretung)
+- E-Mail-Adresse (Pflichtangabe im Impressum)
+- Falls vorhanden: USt-IdNr., Handelsregister, Wirtschafts-ID, zuständige Aufsichtsbehörde
 - Name von Pizza Nr. 70 (fehlt in der Karte, daher noch nicht auf der Seite)
 - Erklärung der Allergen-/Zusatzstoff-Kürzel (A, C, G … / 2, 3, 5 …)
-- **Impressum** und **Datenschutzerklärung** – für eine geschäftliche Website in Deutschland Pflicht
+
+Die Datenschutzerklärung beschreibt nur, was die Website tatsächlich tut: keine Cookies,
+kein Tracking, keine eingebetteten Drittinhalte, Schriften lokal, Hosting über GitHub Pages.
+Wird später etwas Externes eingebunden (z. B. Karte, Analyse, Formular), muss sie angepasst werden.
 
 ## Struktur
 
 ```
 index.html                  Startseite
 speisekarte.html            Speisekarte (eigene Seite)
+impressum.html              Impressum
+datenschutz.html            Datenschutzerklärung
 assets/css/style.css        Design & Animationen (beide Seiten)
 assets/js/common.js         Navigation, Live-Status, Fortschrittsbalken (beide Seiten)
 assets/js/main.js           Animationen der Startseite
