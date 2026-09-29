@@ -127,8 +127,7 @@
     el: $('.menu'),
     track: $('.menu__track'),
     cards: $$('.menu .card'),
-    count: $('.menu__count'),
-    bar: $('.menu__bar i'),
+    dots: $$('.menu__dot'),
     enabled: false,
     top: 0,
     dist: 0,
@@ -150,11 +149,8 @@
     const p = clamp((y - menu.top) / (menu.dist || 1));
     const x = -p * menu.dist;
     menu.track.style.transform = `translate3d(${x.toFixed(1)}px, 0, 0)`;
-    if (menu.bar) menu.bar.style.transform = `scaleX(${(0.2 + p * 0.8).toFixed(4)})`;
-    if (menu.count) {
-      const idx = Math.min(menu.cards.length, Math.floor(p * (menu.cards.length - 0.01)) + 1);
-      menu.count.textContent = String(idx).padStart(2, '0');
-    }
+    const idx = Math.min(menu.cards.length - 1, Math.floor(p * (menu.cards.length - 0.01)));
+    menu.dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
     // Parallax der Bilder in den Karten
     menu.cards.forEach((card) => {
       const r = card.getBoundingClientRect();
