@@ -14,7 +14,7 @@ Animierte Website für **Hasans Kebab** (Döner-Pizza-Kebab Hasans) in Bad Schus
 - **Pom-Döner-Baukasten**: beim Scrollen baut sich der Pom Döner Schicht für Schicht zusammen
   (Brot → Fleisch → Salat → Soßen → Pommes → Deckel drauf)
 - **Unsere Spezialitäten** als horizontale Scroll-Galerie (am Handy zum Wischen):
-  Pom Döner, Döner, Dürüm, Lahmacun, Falafel, Vegetarisch, Döner Box, Döner Teller, Döner Pizza –
+  Pom Döner, Döner, Dürüm, Lahmacun Spezial, Falafel, Vegetarisch, Döner Box, Döner Teller, Döner Pizza –
   jeweils mit Preis und Allergen-Buchstaben
 - **Über uns**: frische Zutaten, hausgemachte Soßen, täglich frisch zubereitet
 - **Öffnungszeiten** mit Wochentabelle (heutiger Tag markiert) und Live-Status
@@ -63,7 +63,7 @@ python3 -m http.server 8000
 
 - Name von Pizza Nr. 70 (fehlt in der Karte, daher noch nicht auf der Seite)
 
-Lahmacun, Falafel und Vegetarisch zeigen auf der Startseite ein großes Symbol statt eines Fotos.
+Falafel und Vegetarisch zeigen auf der Startseite ein großes Symbol statt eines Fotos.
 Kommen später Fotos dazu, können sie wie bei den anderen Karten eingesetzt werden.
 
 Impressum und Datenschutz werden aus einem Skript erzeugt; fehlende Angaben würden dort
