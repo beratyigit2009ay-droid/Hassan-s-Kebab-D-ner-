@@ -61,15 +61,10 @@ python3 -m http.server 8000
 
 ## Noch einzutragen
 
-Auf der Seite gelb markiert (`<span class="fehlt">`):
-
-- **Fotos** von Lahmacun, Falafel und einem vegetarischen Gericht (Startseite, „Unsere Spezialitäten“) –
-  bis dahin steht dort ein Symbol mit „[Foto fehlt – bitte liefern]“
-- **Erklärung der Zusatzstoff-Nummern 2–9** (Abschnitt „Allergenhinweise“ auf Startseite und Speisekarte)
-
-Außerdem:
-
 - Name von Pizza Nr. 70 (fehlt in der Karte, daher noch nicht auf der Seite)
+
+Lahmacun, Falafel und Vegetarisch zeigen auf der Startseite ein großes Symbol statt eines Fotos.
+Kommen später Fotos dazu, können sie wie bei den anderen Karten eingesetzt werden.
 
 Impressum und Datenschutz werden aus einem Skript erzeugt; fehlende Angaben würden dort
 als `<span class="fehlt">` gelb markiert (aktuell keine).

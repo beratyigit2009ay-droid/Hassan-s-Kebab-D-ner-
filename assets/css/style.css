@@ -932,7 +932,7 @@ html:not(.is-open-now) .visit__heat { animation-play-state: paused; opacity: .35
 .page-head__back:hover { color: var(--fry); translate: -4px 0; }
 .page-head__title {
   margin: .25em 0 .3em;
-  font-size: clamp(2.2rem, 9.5vw, 8rem);
+  font-size: clamp(1.9rem, 9.5vw, 8rem);
   font-weight: 900;
   line-height: .95;
   letter-spacing: -.035em;
@@ -1355,7 +1355,7 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
 }
 .gericht__allergene .allergen { min-width: 0; height: auto; padding: 0; color: inherit; background: none; font-weight: inherit; font-size: inherit; text-decoration: underline dotted rgba(255, 243, 227, .35); text-underline-offset: 2px; }
 
-/* Platzhalter-Bild auf Gerichte-Karten (bis echte Fotos da sind) */
+/* Gerichte-Karten ohne Foto: großes Symbol statt Bild */
 .card__media--placeholder {
   display: grid;
   justify-items: center;
@@ -1364,7 +1364,6 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
   background: radial-gradient(circle at 50% 30%, rgba(255, 122, 26, .28), transparent 60%), linear-gradient(160deg, #2c1e13, #16100b);
 }
 .card__placeholder-ico { width: 46%; max-width: 170px; height: auto; aspect-ratio: 1; color: rgba(255, 198, 46, .42); stroke-width: 1.2; }
-.card__fehlt { display: table; margin-bottom: 10px; font-size: .72rem; line-height: 1.5; }
 
 /* ---------- Über uns ---------- */
 .about, .hours, .allergy {
@@ -1583,8 +1582,10 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
 
 @media (max-width: 480px) {
   /* lange Wörter wie „Spezialitäten“ passen in der breiten Schrift sonst nicht in die Zeile */
-  .section-title, .menu__head .section-title, .about .section-title, .hours .section-title, .allergy .section-title { font-size: clamp(1.7rem, 8vw, 2.4rem); overflow-wrap: break-word; }
+  .section-title, .menu__head .section-title, .about .section-title, .hours .section-title, .allergy .section-title, .visit__title { font-size: clamp(1.7rem, 8vw, 2.4rem); overflow-wrap: break-word; }
   .card__media--placeholder { padding-top: 14%; }
+  /* „Heute“ unter den Wochentag, sonst wird die Tabelle bei „Donnerstag“ zu breit */
+  .hours__table tr.is-today th::after { display: table; margin: 6px 0 0; }
   .card__placeholder-ico { width: 32%; }
 }
 
@@ -1592,6 +1593,7 @@ a.chip:hover { border-color: var(--fry); color: var(--fry); }
   .hero__actions .btn { flex: 1 1 100%; }
   /* „Apfelschorle“ soll neben der Flasche ganz in die Zeile passen */
   .drink h3 { font-size: clamp(.95rem, 3.9vw, 1.4rem); overflow-wrap: break-word; hyphens: auto; }
+  .hours__table th, .hours__table td { padding: 13px 12px; font-size: .95rem; }
 }
 
 /* ---------- Weniger Bewegung ---------- */
