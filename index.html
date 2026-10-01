@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Hasan's Döner · Pizza · Kebab – Pom Döner in Bad Schussenried</title>
+  <title>Hasans Kebab – Frisch vom Spieß in Bad Schussenried</title>
   <meta name="description" content="Hasan's Döner-Pizza-Kebab, Zeppelinstraße 8 in Bad Schussenried – täglich 11–22 Uhr. Döner, Pom Döner (Döner mit Pommes drin), Dürüm, Lahmacun, Pide, Steinofen-Pizza, Calzone und mehr – täglich 11–22 Uhr, Bar- und Kartenzahlung.">
   <meta name="theme-color" content="#0e0a07">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -16,10 +16,7 @@
 
   <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="assets/img/pom-doener.webp"
-        imagesrcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w"
-        imagesizes="(min-width: 900px) 40vw, 90vw">
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
   <script type="application/ld+json">
@@ -50,6 +47,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#top">Zum Inhalt springen</a>
 
   <!-- Wiederverwendbare Grafiken -->
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -131,6 +129,8 @@
     <symbol id="l-tropfen" viewBox="0 0 32 32"><path d="M16 4s-8 9.5-8 15a8 8 0 0 0 16 0c0-5.5-8-15-8-15z"/><path d="M12.5 20a3.5 3.5 0 0 0 3.5 3.5"/></symbol>
     <symbol id="l-keule" viewBox="0 0 32 32"><path d="M13.2 18.8C9.6 15.2 10 9.7 13.6 6.8c3.6-2.9 9-2.4 11.7 1.1 2.8 3.6 2 8.9-1.6 11.5-3.1 2.2-7.5 2-10.5-.6z"/><path d="M13.2 18.8 8.5 23.5"/><path d="M8.5 23.5a2.3 2.3 0 1 0-2.4 3.6 2.3 2.3 0 1 0 3.6-2.4z"/><path d="M17.5 10.5c1.2-1 2.8-1.2 4.1-.6"/></symbol>
     <symbol id="l-tasse" viewBox="0 0 32 32"><path d="M6 13h16v7a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6z"/><path d="M22 15h2a3 3 0 0 1 0 6h-2.3"/><path d="M11 9c-.8-1.3.8-2.2 0-3.6M16 9c-.8-1.3.8-2.2 0-3.6"/></symbol>
+    <symbol id="l-phone" viewBox="0 0 32 32"><path d="M9.5 4.5h4l2 6.2-3.1 2a14.5 14.5 0 0 0 7.9 7.9l2-3.1 6.2 2v4a3 3 0 0 1-3 3C14.9 26.5 5.5 17.1 5.5 7.5a3 3 0 0 1 4-3z"/></symbol>
+    <symbol id="l-hinweis" viewBox="0 0 32 32"><path d="M16 4 29 27H3z"/><path d="M16 12.5v6.5M16 23h.01"/></symbol>
     <symbol id="l-plus" viewBox="0 0 32 32"><path d="M16 8v16M8 16h16"/></symbol>
   </svg>
 
@@ -158,12 +158,12 @@
       <span>HASAN'S</span>
     </a>
     <nav class="nav__links" aria-label="Hauptnavigation">
-      <a href="#pom-doener">Pom Döner</a>
-      <a href="#menu">Klassiker</a>
+      <a href="#menu">Spezialitäten</a>
       <a href="speisekarte.html">Speisekarte</a>
-      <a href="#getraenke">Getränke</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#besuch">Besuch</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      <a href="#besuch">Kontakt</a>
+      <a href="#allergene">Allergene</a>
     </nav>
     <a class="btn btn--small btn--primary nav__cta magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Route ↗</a>
     <button class="nav__burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
@@ -173,12 +173,12 @@
 
   <div class="mobile-menu" id="mobile-menu" inert>
     <nav aria-label="Mobile Navigation">
-      <a href="#pom-doener" style="--i:0">Pom Döner</a>
-      <a href="#menu" style="--i:1">Klassiker</a>
-      <a href="speisekarte.html" style="--i:2">Speisekarte</a>
-      <a href="#getraenke" style="--i:3">Getränke</a>
-      <a href="#galerie" style="--i:4">Galerie</a>
-      <a href="#besuch" style="--i:5">Besuch</a>
+      <a href="#menu" style="--i:0">Spezialitäten</a>
+      <a href="speisekarte.html" style="--i:1">Speisekarte</a>
+      <a href="#ueber-uns" style="--i:2">Über uns</a>
+      <a href="#oeffnungszeiten" style="--i:3">Öffnungszeiten</a>
+      <a href="#besuch" style="--i:4">Kontakt</a>
+      <a href="#allergene" style="--i:5">Allergene</a>
     </nav>
     <p class="mobile-menu__foot">Zeppelinstraße 8 · Bad Schussenried<br><a href="tel:+497583926440">07583 926440</a></p>
   </div>
@@ -195,56 +195,77 @@
 
       <div class="hero__content">
         <p class="eyebrow" data-hero style="--d:0">
-          <span class="pulse"></span> Hasan's Döner · Pizza · Kebab — Bad Schussenried
+          <span class="pulse"></span> Döner · Pizza · Kebab — Bad Schussenried
         </p>
-        <h1 class="hero__title" id="hero-title" aria-label="Pom Döner">
-          <span class="line line--fry" aria-hidden="true"><span data-split>POM</span></span>
-          <span class="line" aria-hidden="true"><span data-split>DÖNER</span></span>
-          <span class="sticker" aria-hidden="true">mit Pommes drin!</span>
+        <h1 class="hero__title" id="hero-title" aria-label="Hasans Kebab">
+          <span class="line" aria-hidden="true"><span data-split>HASANS</span></span>
+          <span class="line line--fry" aria-hidden="true"><span data-split>KEBAB</span></span>
         </h1>
-        <p class="hero__lead" data-hero style="--d:1">
-          Unsere Hausspezialität: Döner mit knusprigen Pommes direkt drin.
-          Und natürlich: Döner, Dürüm, Lahmacun, Pide, Steinofen-Pizza und vieles mehr.
-        </p>
-        <div class="hero__actions" data-hero style="--d:2">
-          <a class="btn btn--primary magnetic" href="speisekarte.html">Zur Speisekarte</a>
-          <a class="btn btn--ghost magnetic" href="#pom-doener">Was ist Pom Döner?</a>
+        <p class="hero__lead" data-hero style="--d:1">Frisch vom Spieß, direkt auf die Hand.</p>
+        <div class="hero__open" data-hero style="--d:2">
+          <p class="open-status open-status--big" data-open-status data-open-style="short" role="status">
+            <span class="open-status__dot"></span><span data-open-text>Öffnungsstatus</span>
+          </p>
+          <p class="hero__hours">Täglich 11:00–22:00 Uhr</p>
         </div>
-        <p class="open-status hero__status" data-open-status data-hero style="--d:3">
-          <span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span>
-        </p>
+        <div class="hero__actions" data-hero style="--d:3">
+          <a class="btn btn--primary magnetic" href="speisekarte.html">Speisekarte ansehen</a>
+          <a class="btn btn--ghost magnetic" href="tel:+497583926440" aria-label="Jetzt bestellen – anrufen unter 07583 926440"><svg class="btn__ico" aria-hidden="true"><use href="#l-phone"/></svg>Jetzt bestellen</a>
+        </div>
       </div>
 
       <div class="hero__visual">
-        <figure class="hero__frame">
-          <img src="assets/img/pom-doener.webp"
-               srcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w"
-               sizes="(min-width: 900px) 40vw, 90vw"
-               width="1200" height="1600"
-               alt="Pom Döner: Döner im Fladenbrot mit Salat, Mais, Schafskäse, Soße und knusprigen Pommes, daneben eine Dose Orangenlimo"
-               fetchpriority="high">
-        </figure>
-
-        <div class="badge" aria-hidden="true">
-          <svg class="badge__ring" viewBox="0 0 200 200">
-            <defs><path id="badge-circle" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
-            <text><textPath href="#badge-circle" textLength="474" lengthAdjust="spacing">HAUSSPEZIALITÄT ✦ POM DÖNER ✦ </textPath></text>
-          </svg>
-          <svg class="badge__fry"><use href="#i-fry"/></svg>
+        <div class="hero__spit">
+        <svg class="hero-spit" viewBox="0 0 400 620" role="img" aria-labelledby="hero-spit-title">
+          <title id="hero-spit-title">Döner-Spieß – dreht sich während der Öffnungszeiten</title>
+          <defs>
+            <linearGradient id="hs-steel" x1="0" x2="1"><stop offset="0" stop-color="#7d828a"/><stop offset=".45" stop-color="#eef1f4"/><stop offset="1" stop-color="#6f747b"/></linearGradient>
+            <linearGradient id="hs-shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".78"/><stop offset=".15" stop-color="#000" stop-opacity=".22"/><stop offset=".36" stop-color="#ffd8a8" stop-opacity=".2"/><stop offset=".5" stop-color="#fff" stop-opacity=".04"/><stop offset=".78" stop-color="#000" stop-opacity=".3"/><stop offset="1" stop-color="#000" stop-opacity=".82"/></linearGradient>
+            <linearGradient id="hs-vshade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb46b" stop-opacity=".25"/><stop offset=".3" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient>
+            <linearGradient id="hs-heat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset=".5" stop-color="#ff3d1f"/><stop offset="1" stop-color="#ffb347"/></linearGradient>
+            <radialGradient id="hs-cut"><stop offset="0" stop-color="#eaa566"/><stop offset=".6" stop-color="#c47640"/><stop offset="1" stop-color="#7f3c16"/></radialGradient>
+            <clipPath id="hs-cone"><path d="M66 112 L63.4 127.9 L69.3 143.8 L66.4 159.8 L68.3 175.7 L75.8 191.6 L74.9 207.5 L79.5 223.4 L76.7 239.3 L79.7 255.2 L86.9 271.2 L90 287.1 L87.7 303 L95.9 318.9 L97.8 334.8 L99.8 350.8 L104.9 366.7 L105.2 382.6 L108.5 398.5 L112 414.4 L116.9 430.3 L123.1 446.2 L127.7 462.2 L131.5 478.1 L136 494 Q200 518 264 494 L270.7 478.1 L269.3 462.2 L273.6 446.2 L277.5 430.3 L285.7 414.4 L286 398.5 L289 382.6 L297.4 366.7 L302.9 350.8 L300.6 334.8 L307.1 318.9 L306.7 303 L309.1 287.1 L312.9 271.2 L318.3 255.2 L321 239.3 L322 223.4 L327 207.5 L329.8 191.6 L327.1 175.7 L333.8 159.8 L328.8 143.8 L329.9 127.9 L334 112 Q200 80 66 112Z"/></clipPath>
+            <g id="hs-tile"><rect width="260" height="460" fill="#94431a"/><ellipse cx="84.2" cy="69.4" rx="18.1" ry="3.4" transform="rotate(-9.7 84.2 69.4)" fill="#a8521f"/><ellipse cx="151.5" cy="418.5" rx="10.6" ry="3.5" transform="rotate(-10.3 151.5 418.5)" fill="#7a3412"/><ellipse cx="23.6" cy="195.3" rx="21.1" ry="3.7" transform="rotate(3.1 23.6 195.3)" fill="#9c4a1d"/><ellipse cx="283.6" cy="195.3" rx="21.1" ry="3.7" transform="rotate(3.1 283.6 195.3)" fill="#9c4a1d"/><ellipse cx="151.6" cy="28.5" rx="17" ry="3.3" transform="rotate(-10.9 151.6 28.5)" fill="#9c4a1d"/><ellipse cx="223.2" cy="133.2" rx="9.5" ry="3.7" transform="rotate(1.4 223.2 133.2)" fill="#b35a24"/><ellipse cx="177.3" cy="47.4" rx="16.7" ry="4.1" transform="rotate(1.1 177.3 47.4)" fill="#8a3d17"/><ellipse cx="16.3" cy="27.4" rx="10.5" ry="7.1" transform="rotate(6.7 16.3 27.4)" fill="#7a3412"/><ellipse cx="276.3" cy="27.4" rx="10.5" ry="7.1" transform="rotate(6.7 276.3 27.4)" fill="#7a3412"/><ellipse cx="121.1" cy="424.8" rx="13.1" ry="4.5" transform="rotate(4.8 121.1 424.8)" fill="#9c4a1d"/><ellipse cx="63.5" cy="264.2" rx="15.9" ry="8.3" transform="rotate(-1.2 63.5 264.2)" fill="#c26a2c"/><ellipse cx="158.3" cy="33.7" rx="15.7" ry="4" transform="rotate(-8.4 158.3 33.7)" fill="#b35a24"/><ellipse cx="127.1" cy="18" rx="18.4" ry="7.6" transform="rotate(6.9 127.1 18)" fill="#a8521f"/><ellipse cx="212.8" cy="156.5" rx="13" ry="6" transform="rotate(-1.1 212.8 156.5)" fill="#6b2d0f"/><ellipse cx="218.4" cy="434.6" rx="15.1" ry="7" transform="rotate(5.5 218.4 434.6)" fill="#8a3d17"/><ellipse cx="80.5" cy="265.9" rx="18.6" ry="5.7" transform="rotate(-2.7 80.5 265.9)" fill="#c26a2c"/><ellipse cx="173.8" cy="10.4" rx="14.8" ry="4" transform="rotate(-0.2 173.8 10.4)" fill="#8a3d17"/><ellipse cx="56.7" cy="132.2" rx="19.6" ry="5.4" transform="rotate(-0.1 56.7 132.2)" fill="#6b2d0f"/><ellipse cx="43.3" cy="184.8" rx="11.7" ry="3.8" transform="rotate(8.7 43.3 184.8)" fill="#7a3412"/><ellipse cx="72.4" cy="191" rx="13.1" ry="8.3" transform="rotate(-8.4 72.4 191)" fill="#9c4a1d"/><ellipse cx="45.8" cy="106.7" rx="11" ry="5.9" transform="rotate(-7.6 45.8 106.7)" fill="#a8521f"/><ellipse cx="73.3" cy="67" rx="16.1" ry="6.7" transform="rotate(10.9 73.3 67)" fill="#b35a24"/><ellipse cx="179.5" cy="237.1" rx="17.5" ry="7.1" transform="rotate(-1 179.5 237.1)" fill="#8a3d17"/><ellipse cx="226.5" cy="437.9" rx="18.6" ry="6.4" transform="rotate(-2.4 226.5 437.9)" fill="#7a3412"/><ellipse cx="26.9" cy="291.8" rx="8.1" ry="3.4" transform="rotate(-1.4 26.9 291.8)" fill="#9c4a1d"/><ellipse cx="286.9" cy="291.8" rx="8.1" ry="3.4" transform="rotate(-1.4 286.9 291.8)" fill="#9c4a1d"/><ellipse cx="28.6" cy="276.3" rx="8.7" ry="6.4" transform="rotate(-9.6 28.6 276.3)" fill="#a8521f"/><ellipse cx="288.6" cy="276.3" rx="8.7" ry="6.4" transform="rotate(-9.6 288.6 276.3)" fill="#a8521f"/><ellipse cx="94.5" cy="11.7" rx="21.9" ry="6.7" transform="rotate(3.2 94.5 11.7)" fill="#9c4a1d"/><ellipse cx="248.4" cy="277" rx="15.1" ry="3.7" transform="rotate(11.8 248.4 277)" fill="#7a3412"/><ellipse cx="-11.6" cy="277" rx="15.1" ry="3.7" transform="rotate(11.8 -11.6 277)" fill="#7a3412"/><ellipse cx="121.2" cy="222.6" rx="8.5" ry="3.6" transform="rotate(5.8 121.2 222.6)" fill="#b35a24"/><ellipse cx="124.4" cy="318.3" rx="15.8" ry="4.2" transform="rotate(-3.3 124.4 318.3)" fill="#a8521f"/><ellipse cx="179.4" cy="420.5" rx="19.9" ry="4.8" transform="rotate(8.7 179.4 420.5)" fill="#c26a2c"/><ellipse cx="181" cy="120.1" rx="13.2" ry="4" transform="rotate(-6.7 181 120.1)" fill="#6b2d0f"/><ellipse cx="140.8" cy="231.2" rx="17.8" ry="6.7" transform="rotate(11.6 140.8 231.2)" fill="#6b2d0f"/><ellipse cx="221.7" cy="370.8" rx="20.9" ry="7.4" transform="rotate(-7.2 221.7 370.8)" fill="#9c4a1d"/><ellipse cx="128.1" cy="336.3" rx="23.8" ry="7.7" transform="rotate(-5.8 128.1 336.3)" fill="#7a3412"/><ellipse cx="180.1" cy="440" rx="14.6" ry="8.6" transform="rotate(10.9 180.1 440)" fill="#b35a24"/><ellipse cx="94.8" cy="101.4" rx="10.9" ry="4.2" transform="rotate(-0.4 94.8 101.4)" fill="#9c4a1d"/><ellipse cx="256.2" cy="280.7" rx="7" ry="8.5" transform="rotate(7.2 256.2 280.7)" fill="#b35a24"/><ellipse cx="-3.8" cy="280.7" rx="7" ry="8.5" transform="rotate(7.2 -3.8 280.7)" fill="#b35a24"/><ellipse cx="22" cy="303.9" rx="22.5" ry="7.7" transform="rotate(-7.2 22 303.9)" fill="#6b2d0f"/><ellipse cx="282" cy="303.9" rx="22.5" ry="7.7" transform="rotate(-7.2 282 303.9)" fill="#6b2d0f"/><ellipse cx="231.1" cy="199.6" rx="17.8" ry="3.5" transform="rotate(-2.5 231.1 199.6)" fill="#c26a2c"/><ellipse cx="-28.9" cy="199.6" rx="17.8" ry="3.5" transform="rotate(-2.5 -28.9 199.6)" fill="#c26a2c"/><ellipse cx="104.4" cy="435.5" rx="19.3" ry="4" transform="rotate(-11.3 104.4 435.5)" fill="#9c4a1d"/><ellipse cx="153.6" cy="214.1" rx="18.1" ry="6.7" transform="rotate(11.5 153.6 214.1)" fill="#a8521f"/><ellipse cx="170.9" cy="161.2" rx="16.3" ry="3.8" transform="rotate(7.2 170.9 161.2)" fill="#8a3d17"/><ellipse cx="188.9" cy="47.3" rx="19.7" ry="3.8" transform="rotate(-7.3 188.9 47.3)" fill="#6b2d0f"/><ellipse cx="227.2" cy="12.9" rx="10.6" ry="6" transform="rotate(2.1 227.2 12.9)" fill="#6b2d0f"/><ellipse cx="67.4" cy="192.7" rx="9.2" ry="8.5" transform="rotate(9.5 67.4 192.7)" fill="#b35a24"/><ellipse cx="172.2" cy="374.9" rx="15.8" ry="8" transform="rotate(-8.9 172.2 374.9)" fill="#a8521f"/><ellipse cx="39.5" cy="234.9" rx="21.8" ry="7.7" transform="rotate(-11.9 39.5 234.9)" fill="#a8521f"/><ellipse cx="207.8" cy="79.3" rx="15" ry="7.4" transform="rotate(-10.5 207.8 79.3)" fill="#a8521f"/><ellipse cx="177.4" cy="244.1" rx="15.2" ry="7.7" transform="rotate(-10.6 177.4 244.1)" fill="#a8521f"/><ellipse cx="49.7" cy="19.4" rx="8.7" ry="5.7" transform="rotate(6.2 49.7 19.4)" fill="#8a3d17"/><ellipse cx="237.2" cy="203.9" rx="17.4" ry="6" transform="rotate(-7.2 237.2 203.9)" fill="#a8521f"/><ellipse cx="-22.8" cy="203.9" rx="17.4" ry="6" transform="rotate(-7.2 -22.8 203.9)" fill="#a8521f"/><ellipse cx="72.1" cy="233.8" rx="20.7" ry="6" transform="rotate(4.8 72.1 233.8)" fill="#9c4a1d"/><ellipse cx="227.9" cy="433.4" rx="11.4" ry="6.4" transform="rotate(8.2 227.9 433.4)" fill="#9c4a1d"/><ellipse cx="35.7" cy="55.9" rx="14.5" ry="3.4" transform="rotate(-1.7 35.7 55.9)" fill="#9c4a1d"/><ellipse cx="55.3" cy="139.3" rx="9.1" ry="7.7" transform="rotate(3.4 55.3 139.3)" fill="#c26a2c"/><ellipse cx="95.2" cy="116.4" rx="9.3" ry="5.8" transform="rotate(10.9 95.2 116.4)" fill="#c26a2c"/><ellipse cx="103.5" cy="224.1" rx="23.8" ry="8" transform="rotate(5 103.5 224.1)" fill="#9c4a1d"/><ellipse cx="258.5" cy="185.8" rx="14.2" ry="5.1" transform="rotate(5.3 258.5 185.8)" fill="#8a3d17"/><ellipse cx="-1.5" cy="185.8" rx="14.2" ry="5.1" transform="rotate(5.3 -1.5 185.8)" fill="#8a3d17"/><ellipse cx="5.1" cy="254.9" rx="14.5" ry="3.1" transform="rotate(0.4 5.1 254.9)" fill="#b35a24"/><ellipse cx="265.1" cy="254.9" rx="14.5" ry="3.1" transform="rotate(0.4 265.1 254.9)" fill="#b35a24"/><ellipse cx="76.8" cy="442" rx="8.9" ry="8.5" transform="rotate(11.3 76.8 442)" fill="#9c4a1d"/><ellipse cx="27.2" cy="122.2" rx="7.7" ry="7.7" transform="rotate(6.1 27.2 122.2)" fill="#b35a24"/><ellipse cx="287.2" cy="122.2" rx="7.7" ry="7.7" transform="rotate(6.1 287.2 122.2)" fill="#b35a24"/><ellipse cx="213.1" cy="390.8" rx="18.5" ry="8.7" transform="rotate(-8.4 213.1 390.8)" fill="#7a3412"/><ellipse cx="239" cy="262.5" rx="18.9" ry="3.5" transform="rotate(7.2 239 262.5)" fill="#8a3d17"/><ellipse cx="-21" cy="262.5" rx="18.9" ry="3.5" transform="rotate(7.2 -21 262.5)" fill="#8a3d17"/><ellipse cx="47.7" cy="411.8" rx="11.6" ry="3.1" transform="rotate(7.2 47.7 411.8)" fill="#8a3d17"/><ellipse cx="21.8" cy="393.9" rx="8.1" ry="8.2" transform="rotate(-11.7 21.8 393.9)" fill="#7a3412"/><ellipse cx="281.8" cy="393.9" rx="8.1" ry="8.2" transform="rotate(-11.7 281.8 393.9)" fill="#7a3412"/><ellipse cx="258.5" cy="192.2" rx="22.6" ry="6.7" transform="rotate(0.6 258.5 192.2)" fill="#8a3d17"/><ellipse cx="-1.5" cy="192.2" rx="22.6" ry="6.7" transform="rotate(0.6 -1.5 192.2)" fill="#8a3d17"/><ellipse cx="62" cy="50.3" rx="9.7" ry="3.3" transform="rotate(10.4 62 50.3)" fill="#9c4a1d"/><ellipse cx="163.5" cy="244.3" rx="10.5" ry="5.7" transform="rotate(-7.7 163.5 244.3)" fill="#c26a2c"/><ellipse cx="90.2" cy="8.4" rx="11.3" ry="3.1" transform="rotate(0.1 90.2 8.4)" fill="#c26a2c"/><ellipse cx="254.3" cy="236.5" rx="11.2" ry="5.7" transform="rotate(7.7 254.3 236.5)" fill="#c26a2c"/><ellipse cx="-5.7" cy="236.5" rx="11.2" ry="5.7" transform="rotate(7.7 -5.7 236.5)" fill="#c26a2c"/><ellipse cx="112.4" cy="227.7" rx="21.2" ry="5.4" transform="rotate(-4.6 112.4 227.7)" fill="#a8521f"/><ellipse cx="55.9" cy="105.6" rx="10.4" ry="8.3" transform="rotate(3.3 55.9 105.6)" fill="#c26a2c"/><ellipse cx="105.2" cy="159.9" rx="7.9" ry="3.8" transform="rotate(3 105.2 159.9)" fill="#8a3d17"/><ellipse cx="228.8" cy="198.1" rx="7.9" ry="7" transform="rotate(8.9 228.8 198.1)" fill="#7a3412"/><ellipse cx="174.3" cy="129.7" rx="11.1" ry="4.8" transform="rotate(-7.6 174.3 129.7)" fill="#7a3412"/><ellipse cx="69.9" cy="1.7" rx="13.2" ry="5" transform="rotate(-4.2 69.9 1.7)" fill="#a8521f"/><ellipse cx="9" cy="405.9" rx="10.7" ry="4.1" transform="rotate(-2.8 9 405.9)" fill="#b35a24"/><ellipse cx="269" cy="405.9" rx="10.7" ry="4.1" transform="rotate(-2.8 269 405.9)" fill="#b35a24"/><ellipse cx="123.4" cy="231.3" rx="10.4" ry="6" transform="rotate(-9.8 123.4 231.3)" fill="#8a3d17"/><ellipse cx="212.4" cy="66.2" rx="17" ry="5.4" transform="rotate(-4.7 212.4 66.2)" fill="#b35a24"/><ellipse cx="60.5" cy="269.4" rx="16" ry="7.5" transform="rotate(9.4 60.5 269.4)" fill="#c26a2c"/><ellipse cx="203.9" cy="274.4" rx="20" ry="7.3" transform="rotate(-8.4 203.9 274.4)" fill="#7a3412"/><ellipse cx="188.3" cy="295.9" rx="7.7" ry="8" transform="rotate(3.1 188.3 295.9)" fill="#a8521f"/><ellipse cx="190.8" cy="373.6" rx="9.4" ry="6.1" transform="rotate(1.6 190.8 373.6)" fill="#a8521f"/><ellipse cx="211.4" cy="7.4" rx="18.7" ry="7.8" transform="rotate(4.4 211.4 7.4)" fill="#c26a2c"/><ellipse cx="180.3" cy="105.8" rx="7.5" ry="3.8" transform="rotate(11 180.3 105.8)" fill="#b35a24"/><ellipse cx="97.9" cy="207.6" rx="7.9" ry="3.1" transform="rotate(4.3 97.9 207.6)" fill="#a8521f"/><ellipse cx="127.2" cy="1.5" rx="20.6" ry="7.5" transform="rotate(9.5 127.2 1.5)" fill="#a8521f"/><ellipse cx="23.9" cy="242" rx="19.7" ry="5.8" transform="rotate(-10.2 23.9 242)" fill="#6b2d0f"/><ellipse cx="283.9" cy="242" rx="19.7" ry="5.8" transform="rotate(-10.2 283.9 242)" fill="#6b2d0f"/><ellipse cx="69" cy="335.5" rx="10.5" ry="7.4" transform="rotate(-0.1 69 335.5)" fill="#7a3412"/><ellipse cx="99.5" cy="220.3" rx="18.6" ry="7.6" transform="rotate(3.2 99.5 220.3)" fill="#a8521f"/><ellipse cx="51.6" cy="275.9" rx="12.6" ry="6.9" transform="rotate(-4.7 51.6 275.9)" fill="#c26a2c"/><ellipse cx="147.6" cy="5.7" rx="8" ry="4.6" transform="rotate(-9.6 147.6 5.7)" fill="#c26a2c"/><ellipse cx="56.6" cy="225.2" rx="19.1" ry="4.7" transform="rotate(-0.8 56.6 225.2)" fill="#7a3412"/><ellipse cx="30.8" cy="411.1" rx="10.4" ry="8.9" transform="rotate(-11.6 30.8 411.1)" fill="#7a3412"/><ellipse cx="119.3" cy="377.2" rx="23.5" ry="5.7" transform="rotate(-2.7 119.3 377.2)" fill="#b35a24"/><ellipse cx="238.3" cy="428" rx="8.3" ry="3.5" transform="rotate(0.6 238.3 428)" fill="#c26a2c"/><ellipse cx="-21.7" cy="428" rx="8.3" ry="3.5" transform="rotate(0.6 -21.7 428)" fill="#c26a2c"/><ellipse cx="247.7" cy="61" rx="20.9" ry="6.1" transform="rotate(4.9 247.7 61)" fill="#8a3d17"/><ellipse cx="-12.3" cy="61" rx="20.9" ry="6.1" transform="rotate(4.9 -12.3 61)" fill="#8a3d17"/><ellipse cx="60.2" cy="412.9" rx="15.3" ry="3.1" transform="rotate(10.8 60.2 412.9)" fill="#8a3d17"/><ellipse cx="177.2" cy="186.5" rx="19.4" ry="5.5" transform="rotate(-4.4 177.2 186.5)" fill="#7a3412"/><ellipse cx="218.5" cy="0.8" rx="19.8" ry="8" transform="rotate(10.6 218.5 0.8)" fill="#8a3d17"/><ellipse cx="50.9" cy="5.4" rx="19.6" ry="4.5" transform="rotate(-2.6 50.9 5.4)" fill="#8a3d17"/><ellipse cx="259.7" cy="271" rx="13.1" ry="5.6" transform="rotate(8.5 259.7 271)" fill="#b35a24"/><ellipse cx="-0.3" cy="271" rx="13.1" ry="5.6" transform="rotate(8.5 -0.3 271)" fill="#b35a24"/><ellipse cx="73" cy="23.7" rx="18.3" ry="6.8" transform="rotate(-6 73 23.7)" fill="#9c4a1d"/><ellipse cx="69.1" cy="235" rx="10.2" ry="5.2" transform="rotate(9.2 69.1 235)" fill="#7a3412"/><ellipse cx="211.1" cy="290.2" rx="22.5" ry="8.6" transform="rotate(-7.1 211.1 290.2)" fill="#a8521f"/><ellipse cx="20.9" cy="429.4" rx="14" ry="6.7" transform="rotate(3.5 20.9 429.4)" fill="#9c4a1d"/><ellipse cx="280.9" cy="429.4" rx="14" ry="6.7" transform="rotate(3.5 280.9 429.4)" fill="#9c4a1d"/><ellipse cx="74.4" cy="22.5" rx="22.8" ry="3.8" transform="rotate(-2 74.4 22.5)" fill="#7a3412"/><ellipse cx="73.3" cy="117.6" rx="19.6" ry="6.9" transform="rotate(3.7 73.3 117.6)" fill="#7a3412"/><ellipse cx="78.2" cy="256.4" rx="13.7" ry="4" transform="rotate(-10.2 78.2 256.4)" fill="#9c4a1d"/><ellipse cx="130.2" cy="373.4" rx="16.4" ry="5.7" transform="rotate(11.9 130.2 373.4)" fill="#b35a24"/><ellipse cx="117" cy="64.2" rx="10.3" ry="3.5" transform="rotate(1.3 117 64.2)" fill="#b35a24"/><ellipse cx="83" cy="169.4" rx="20.8" ry="4.2" transform="rotate(6 83 169.4)" fill="#8a3d17"/><ellipse cx="107.3" cy="190.4" rx="15.9" ry="5.3" transform="rotate(6.1 107.3 190.4)" fill="#b35a24"/><ellipse cx="129.5" cy="264.2" rx="13.1" ry="7.1" transform="rotate(3.1 129.5 264.2)" fill="#a8521f"/><ellipse cx="224.3" cy="99.3" rx="11.6" ry="4.5" transform="rotate(3.5 224.3 99.3)" fill="#7a3412"/><ellipse cx="112.3" cy="143.5" rx="20.8" ry="8.8" transform="rotate(-11.2 112.3 143.5)" fill="#9c4a1d"/><ellipse cx="184.5" cy="412" rx="15" ry="6.5" transform="rotate(-10.2 184.5 412)" fill="#8a3d17"/><ellipse cx="241.9" cy="427" rx="16" ry="5.8" transform="rotate(-6 241.9 427)" fill="#7a3412"/><ellipse cx="-18.1" cy="427" rx="16" ry="5.8" transform="rotate(-6 -18.1 427)" fill="#7a3412"/><ellipse cx="28.4" cy="71" rx="15.9" ry="7.1" transform="rotate(5.3 28.4 71)" fill="#6b2d0f"/><ellipse cx="288.4" cy="71" rx="15.9" ry="7.1" transform="rotate(5.3 288.4 71)" fill="#6b2d0f"/><ellipse cx="168.3" cy="351.8" rx="14.8" ry="6.3" transform="rotate(-12 168.3 351.8)" fill="#8a3d17"/><ellipse cx="32.7" cy="261.9" rx="7.6" ry="7.3" transform="rotate(3 32.7 261.9)" fill="#9c4a1d"/><g fill="#3a1606" opacity=".75"><circle cx="137.3" cy="201.2" r="3.8"/><circle cx="25.9" cy="138.2" r="4.3"/><circle cx="49.8" cy="120" r="3.9"/><circle cx="0.3" cy="247.2" r="4.5"/><circle cx="260.3" cy="247.2" r="4.5"/><circle cx="72.4" cy="145.5" r="4"/><circle cx="63" cy="242.1" r="3.1"/><circle cx="7.6" cy="189.4" r="3.4"/><circle cx="267.6" cy="189.4" r="3.4"/><circle cx="14.4" cy="89.3" r="4.2"/><circle cx="168.3" cy="37.3" r="2.2"/><circle cx="110.3" cy="170.3" r="3"/><circle cx="180.9" cy="330.4" r="2.6"/><circle cx="103.1" cy="3.1" r="2.4"/><circle cx="219.7" cy="31" r="3"/><circle cx="52.1" cy="352.3" r="2.1"/><circle cx="120.9" cy="121.9" r="4.2"/><circle cx="28.3" cy="286.9" r="3.3"/><circle cx="233.1" cy="223.1" r="4.2"/><circle cx="14.7" cy="273.6" r="4.3"/><circle cx="14.1" cy="10.9" r="3.3"/><circle cx="108" cy="326.5" r="2.1"/><circle cx="116.9" cy="327.5" r="2.4"/><circle cx="29.4" cy="36.5" r="2"/><circle cx="49.6" cy="300.1" r="3.1"/><circle cx="121.6" cy="143.4" r="3.7"/><circle cx="218.2" cy="453.1" r="2.8"/><circle cx="28.3" cy="36" r="1.7"/><circle cx="109.2" cy="407.2" r="3.2"/><circle cx="197.3" cy="174.9" r="3.8"/><circle cx="80.3" cy="369.8" r="1.8"/><circle cx="183.4" cy="90" r="3.1"/><circle cx="116.1" cy="148.7" r="3.7"/><circle cx="123.4" cy="290.6" r="2.2"/><circle cx="162.6" cy="186.2" r="2.6"/><circle cx="120.7" cy="369.5" r="1.7"/><circle cx="50.7" cy="28.9" r="3.3"/><circle cx="94.4" cy="154.1" r="4.4"/><circle cx="11.3" cy="343.4" r="3.6"/><circle cx="240.3" cy="136.8" r="3.7"/><circle cx="154.8" cy="370.6" r="4.3"/><circle cx="17" cy="380" r="1.8"/><circle cx="186" cy="214.2" r="3.8"/><circle cx="205.3" cy="420.2" r="3.9"/><circle cx="34.5" cy="228.4" r="1.5"/><circle cx="242.1" cy="139.5" r="3.6"/><circle cx="39.3" cy="108.6" r="4.1"/><circle cx="119.8" cy="360.6" r="3.3"/><circle cx="133.1" cy="180.2" r="2"/><circle cx="106" cy="298.8" r="2.9"/><circle cx="141.6" cy="73.9" r="2.8"/><circle cx="27.4" cy="33.2" r="3.4"/></g><g fill="#f2b06a" opacity=".45"><ellipse cx="54.2" cy="193.7" rx="9.9" ry="2.9"/><ellipse cx="45" cy="61.1" rx="6.2" ry="2.8"/><ellipse cx="61.1" cy="247.7" rx="8.4" ry="2.6"/><ellipse cx="202.7" cy="135.2" rx="5" ry="1.7"/><ellipse cx="66.1" cy="119.8" rx="6.1" ry="1.5"/><ellipse cx="61.2" cy="129.4" rx="9.4" ry="1.5"/><ellipse cx="16.8" cy="115.8" rx="4.7" ry="2.1"/><ellipse cx="168.9" cy="46.2" rx="6.2" ry="1.3"/><ellipse cx="1.2" cy="406.1" rx="4.6" ry="2"/><ellipse cx="261.2" cy="406.1" rx="4.6" ry="2"/><ellipse cx="97.2" cy="403.4" rx="4.6" ry="1.3"/><ellipse cx="156.1" cy="380.8" rx="4.4" ry="1.3"/><ellipse cx="133.3" cy="81.8" rx="7.2" ry="2.6"/><ellipse cx="172.8" cy="2.9" rx="7.5" ry="2.5"/><ellipse cx="90.9" cy="17.2" rx="5.4" ry="1.3"/><ellipse cx="260" cy="17.6" rx="8.1" ry="2.8"/><ellipse cx="-0" cy="17.6" rx="8.1" ry="2.8"/><ellipse cx="211.8" cy="376.7" rx="5.9" ry="1.9"/><ellipse cx="161.5" cy="35.8" rx="3.2" ry="2.1"/><ellipse cx="125.7" cy="187.8" rx="8.6" ry="2.4"/><ellipse cx="40.2" cy="245.6" rx="7.6" ry="1.9"/><ellipse cx="70.5" cy="454.6" rx="7.7" ry="2"/><ellipse cx="13.4" cy="342.9" rx="9.2" ry="1.9"/><ellipse cx="273.4" cy="342.9" rx="9.2" ry="1.9"/><ellipse cx="4.7" cy="352.7" rx="8.6" ry="2.4"/><ellipse cx="264.7" cy="352.7" rx="8.6" ry="2.4"/><ellipse cx="101.6" cy="186.3" rx="9.6" ry="2"/><ellipse cx="40.7" cy="52.2" rx="3.6" ry="2.2"/><ellipse cx="94.8" cy="355.6" rx="3.9" ry="1.3"/><ellipse cx="37" cy="371" rx="5.8" ry="2.2"/><ellipse cx="241.1" cy="339.1" rx="4.2" ry="1.8"/><ellipse cx="42.1" cy="79" rx="3.5" ry="1.9"/><ellipse cx="195.9" cy="364.4" rx="8.6" ry="1.7"/><ellipse cx="217.7" cy="20" rx="9.4" ry="1.8"/><ellipse cx="158" cy="292.7" rx="3.6" ry="2.5"/><ellipse cx="178.9" cy="409.9" rx="7.5" ry="2.7"/><ellipse cx="161.5" cy="282.8" rx="4.4" ry="2.1"/><ellipse cx="147" cy="19.2" rx="9.6" ry="1.5"/><ellipse cx="93.4" cy="68.8" rx="9.8" ry="2.7"/><ellipse cx="50.1" cy="406.6" rx="8.9" ry="2.4"/><ellipse cx="173.7" cy="149.1" rx="5.7" ry="2"/><ellipse cx="220.7" cy="357.9" rx="7.5" ry="1.8"/><ellipse cx="64.8" cy="179" rx="5.6" ry="2.1"/><ellipse cx="46.5" cy="1.6" rx="9.9" ry="2"/><ellipse cx="116.2" cy="284.5" rx="8.7" ry="2.7"/><ellipse cx="210.7" cy="184.2" rx="3.5" ry="1.8"/><ellipse cx="95" cy="369" rx="6.5" ry="2.4"/><ellipse cx="10.6" cy="59.9" rx="9.5" ry="1.8"/><ellipse cx="270.6" cy="59.9" rx="9.5" ry="1.8"/><ellipse cx="187.3" cy="36.8" rx="8.3" ry="2.8"/></g><path d="M22 0 L24.8 28.4 L17.7 46.9 L23.9 74.7 L18.3 94.4 L19.9 126.6 L24.9 157.6 L24.2 186.6 L25.3 208.1 L19.5 235.9 L23.1 259 L21.6 291.5 L26.6 313.6 L22.9 339.3 L19.4 367.1 L19 391.1 L23.4 415.5 L20.3 438 L22 460 M88 0 L90.7 22.2 L91.6 41 L87.5 74.5 L89.9 100.8 L85.5 133.1 L91.6 159.7 L86.7 189.5 L86.7 213.5 L86.3 233.9 L85.3 253.2 L92.6 281 L88.2 303.8 L92.7 326.7 L92.3 358.7 L90.3 391 L85.2 420.9 L89.3 443.6 L88 460 M150 0 L149.9 18.8 L145.5 46.6 L150.7 65.4 L150.2 88.3 L149.1 114.8 L146.3 137.7 L153.3 161.5 L145.1 182.1 L152.1 212.9 L145.6 238.1 L151.7 258.4 L153.1 280.7 L145.6 314.2 L153.9 345.3 L150.8 372.8 L150.2 400.5 L146.7 426.4 L145.6 444.4 L150 460 M214 0 L218.1 20.5 L215.1 40.2 L211 68.7 L214.2 93.3 L215.5 121.6 L215.1 146.3 L209.6 172.4 L218.9 200.4 L213.8 230 L212.8 256.6 L218.1 281.6 L215.6 300.9 L219 321.7 L215.4 343.9 L217.9 363.9 L218.4 396.7 L209.5 418.9 L215.8 447.1 L214 460" fill="none" stroke="#4a1c08" stroke-width="3" stroke-linejoin="round" opacity=".5"/></g>
+            <filter id="hs-blur" x="-80%" y="-20%" width="260%" height="140%"><feGaussianBlur stdDeviation="14"/></filter>
+          </defs>
+          <g class="hero-spit__heater">
+            <rect x="352" y="120" width="26" height="370" rx="13" fill="url(#hs-heat)" filter="url(#hs-blur)" opacity=".85"/>
+            <rect x="356" y="126" width="18" height="358" rx="9" fill="url(#hs-heat)"/>
+          </g>
+          <rect x="350" y="112" width="30" height="386" rx="15" fill="none" stroke="#5b534c" stroke-width="3"/>
+          <rect x="193" y="26" width="14" height="560" rx="7" fill="url(#hs-steel)"/>
+          <circle cx="200" cy="30" r="15" fill="url(#hs-steel)"/>
+          <g clip-path="url(#hs-cone)">
+            <g class="hero-spit__meat">
+              <use href="#hs-tile" x="0" y="70"/><use href="#hs-tile" x="260" y="70"/><use href="#hs-tile" x="520" y="70"/>
+            </g>
+            <path d="M67.4 147.3 L100.6 152.7 L133.7 163.3 L166.9 165.9 L200 168.1 L233.1 167.6 L266.3 162.4 L299.4 155.2 L332.6 145.4 M72 178 L104 185 L136 196.3 L168 200.6 L200 201.4 L232 196.5 L264 195.3 L296 188 L328 179.3 M77 212.8 L107.7 219.7 L138.5 224.4 L169.2 229 L200 230.1 L230.8 229 L261.5 227.6 L292.3 216.7 L323 212.6 M84.3 255.4 L113.2 261.9 L142.2 267.5 L171.1 270.7 L200 274.4 L228.9 273.2 L257.8 265.2 L286.8 261.5 L315.7 252 M91.1 288.4 L118.3 298 L145.5 304.7 L172.8 309.3 L200 309.4 L227.2 306.6 L254.5 303.3 L281.7 297.8 L308.9 289.6 M98.9 328.9 L124.2 337.1 L149.5 341.5 L174.7 348.3 L200 350.3 L225.3 349.7 L250.5 344 L275.8 340.1 L301.1 331.2 M106.7 367.5 L130 377.2 L153.3 383.3 L176.7 383.4 L200 384.4 L223.3 386.9 L246.7 382.4 L270 375.6 L293.3 371.7 M114.7 405.1 L136 412.4 L157.3 416.4 L178.7 424 L200 425.1 L221.3 423.1 L242.7 418 L264 413.9 L285.3 406.4 M122.1 441 L141.6 447.4 L161.1 450.5 L180.5 457.9 L200 457.3 L219.5 457.7 L238.9 450.3 L258.4 447.7 L277.9 442.3 M130.8 477.5 L148.1 485.8 L165.4 490.2 L182.7 495.1 L200 494.1 L217.3 493.5 L234.6 489.2 L251.9 485.2 L269.2 480.7" fill="none" stroke="#3a1606" stroke-width="4" stroke-linejoin="round" opacity=".5"/>
+            <path d="M67.4 152.3 L100.6 157.7 L133.7 168.3 L166.9 170.9 L200 173.1 L233.1 172.6 L266.3 167.4 L299.4 160.2 L332.6 150.4 M72 183 L104 190 L136 201.3 L168 205.6 L200 206.4 L232 201.5 L264 200.3 L296 193 L328 184.3 M77 217.8 L107.7 224.7 L138.5 229.4 L169.2 234 L200 235.1 L230.8 234 L261.5 232.6 L292.3 221.7 L323 217.6 M84.3 260.4 L113.2 266.9 L142.2 272.5 L171.1 275.7 L200 279.4 L228.9 278.2 L257.8 270.2 L286.8 266.5 L315.7 257 M91.1 293.4 L118.3 303 L145.5 309.7 L172.8 314.3 L200 314.4 L227.2 311.6 L254.5 308.3 L281.7 302.8 L308.9 294.6 M98.9 333.9 L124.2 342.1 L149.5 346.5 L174.7 353.3 L200 355.3 L225.3 354.7 L250.5 349 L275.8 345.1 L301.1 336.2 M106.7 372.5 L130 382.2 L153.3 388.3 L176.7 388.4 L200 389.4 L223.3 391.9 L246.7 387.4 L270 380.6 L293.3 376.7 M114.7 410.1 L136 417.4 L157.3 421.4 L178.7 429 L200 430.1 L221.3 428.1 L242.7 423 L264 418.9 L285.3 411.4 M122.1 446 L141.6 452.4 L161.1 455.5 L180.5 462.9 L200 462.3 L219.5 462.7 L238.9 455.3 L258.4 452.7 L277.9 447.3 M130.8 482.5 L148.1 490.8 L165.4 495.2 L182.7 500.1 L200 499.1 L217.3 498.5 L234.6 494.2 L251.9 490.2 L269.2 485.7" fill="none" stroke="#f3b371" stroke-width="2" stroke-linejoin="round" opacity=".28"/>
+            <rect x="50" y="70" width="300" height="460" fill="url(#hs-shade)"/>
+            <rect x="50" y="70" width="300" height="460" fill="url(#hs-vshade)"/>
+          </g>
+          <ellipse cx="200" cy="112" rx="134" ry="22" fill="url(#hs-cut)"/>
+          <ellipse cx="200" cy="112" rx="98" ry="14" fill="none" stroke="#9c5226" stroke-width="3" opacity=".55"/>
+          <ellipse cx="200" cy="112" rx="58" ry="8" fill="none" stroke="#9c5226" stroke-width="3" opacity=".45"/>
+          <ellipse cx="200" cy="112" rx="9" ry="4" fill="#d7dbe0"/>
+          <path d="M120 540h160l-14 26H134z" fill="#4a4540"/>
+          <ellipse cx="200" cy="540" rx="80" ry="10" fill="#8f8780"/>
+          <ellipse cx="200" cy="540" rx="64" ry="6" fill="#6b3a1c" opacity=".8"/>
+          <rect x="184" y="566" width="32" height="24" rx="4" fill="url(#hs-steel)"/>
+          <g class="hero-spit__steam" fill="none" stroke="#fff3e3" stroke-width="5" stroke-linecap="round">
+            <path d="M150 84c-12-16 12-26 0-42s10-24 0-38"/><path d="M250 84c-12-16 12-26 0-42s10-24 0-38"/>
+          </g>
+        </svg>
         </div>
-
         <div class="floaters" aria-hidden="true">
-          <span class="floater" style="--x:-6%;--y:8%;--depth:1.2"><svg class="fl fl--fry" style="--r:-28deg;--dur:6.5s"><use href="#i-fry"/></svg></span>
-          <span class="floater" style="--x:88%;--y:2%;--depth:.7"><svg class="fl fl--fry" style="--r:22deg;--dur:7.5s;--s:.8"><use href="#i-fry"/></svg></span>
-          <span class="floater" style="--x:94%;--y:62%;--depth:1.5"><svg class="fl fl--fry" style="--r:-12deg;--dur:8s;--s:1.1"><use href="#i-fry"/></svg></span>
-          <span class="floater" style="--x:-4%;--y:70%;--depth:.9"><svg class="fl fl--corn" style="--r:10deg;--dur:5s"><use href="#i-corn"/></svg></span>
-          <span class="floater" style="--x:10%;--y:92%;--depth:1.3"><svg class="fl fl--drop" style="--r:-8deg;--dur:6s"><use href="#i-drop"/></svg></span>
-          <span class="floater" style="--x:80%;--y:92%;--depth:.8"><svg class="fl fl--corn" style="--r:-30deg;--dur:5.5s;--s:.8"><use href="#i-corn"/></svg></span>
-          <span class="floater" style="--x:48%;--y:-6%;--depth:1"><svg class="fl fl--drop" style="--r:14deg;--dur:7s;--s:.7"><use href="#i-drop"/></svg></span>
+          <span class="floater" style="--x:-4%;--y:14%;--depth:1.2"><svg class="fl fl--fry" style="--r:-28deg;--dur:6.5s"><use href="#i-fry"/></svg></span>
+          <span class="floater" style="--x:6%;--y:80%;--depth:1.3"><svg class="fl fl--drop" style="--r:-8deg;--dur:6s"><use href="#i-drop"/></svg></span>
+          <span class="floater" style="--x:86%;--y:6%;--depth:.8"><svg class="fl fl--corn" style="--r:-30deg;--dur:5.5s;--s:.8"><use href="#i-corn"/></svg></span>
+          <span class="floater" style="--x:92%;--y:78%;--depth:1.5"><svg class="fl fl--fry" style="--r:-12deg;--dur:8s;--s:.9"><use href="#i-fry"/></svg></span>
         </div>
       </div>
 
-      <a class="scroll-hint" href="#pom-doener" aria-label="Weiter scrollen">
+      <a class="scroll-hint" href="#menu" aria-label="Weiter zu unseren Spezialitäten">
         <span>Scroll</span><i></i>
       </a>
     </section>
@@ -276,6 +297,208 @@
         </div>
       </div>
     </div>
+
+    <!-- MENÜ (horizontal) -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="menu__sticky">
+        <header class="menu__head">
+          <div>
+            <p class="eyebrow">Frisch vom Spieß</p>
+            <h2 class="section-title" id="menu-title">Unsere <em>Spezialitäten.</em></h2>
+          </div>
+          <div class="menu__progress" aria-hidden="true">
+            <svg class="menu__dot is-active"><use href="#l-pommes"/></svg>
+            <svg class="menu__dot"><use href="#l-spiess"/></svg>
+            <svg class="menu__dot"><use href="#l-wrap"/></svg>
+            <svg class="menu__dot"><use href="#l-lahmacun"/></svg>
+            <svg class="menu__dot"><use href="#l-falafel"/></svg>
+            <svg class="menu__dot"><use href="#l-blatt"/></svg>
+            <svg class="menu__dot"><use href="#l-box"/></svg>
+            <svg class="menu__dot"><use href="#l-teller"/></svg>
+            <svg class="menu__dot"><use href="#l-pizza"/></svg>
+          </div>
+        </header>
+
+        <div class="menu__viewport">
+          <div class="menu__track">
+            <article class="card card--star" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-doener" data-cursor="Zur Karte" aria-label="Pom Döner in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/pom-doener-sm.webp" srcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w" sizes="(min-width: 900px) 520px, 82vw" width="1200" height="1600" loading="lazy" alt="Pom Döner mit Pommes auf einem verzierten Metallteller" style="--pos:50% 55%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-pommes"/></svg>
+              <span class="card__tag"><svg><use href="#i-spark"/></svg> Star des Hauses</span>
+              <div class="card__body">
+                <span class="card__price">9,00 €</span>
+                <h3 class="card__title">Pom Döner</h3>
+                <p>Döner im Fladenbrot mit Salat, Soße und Schafskäse – und die knusprigen Pommes stecken direkt mit drin.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-doener" data-cursor="Zur Karte" aria-label="Döner in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/doener-kebab-sm.webp" srcset="assets/img/doener-kebab-sm.webp 640w, assets/img/doener-kebab.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner im Fladenbrot mit Mais, Schafskäse, Salat und Soßen, daneben ein Ayran" style="--pos:70% 62%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-spiess"/></svg>
+              <span class="card__tag">Klassiker</span>
+              <div class="card__body">
+                <span class="card__price">ab 8,00 €</span>
+                <h3 class="card__title">Döner</h3>
+                <p>Getoastetes Fladenbrot, saftiges Fleisch vom Spieß, Salat, Mais, Schafskäse und Soßen.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-duerum" data-cursor="Zur Karte" aria-label="Dürüm in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/duerum-sm.webp" srcset="assets/img/duerum-sm.webp 640w, assets/img/duerum.webp 1200w" sizes="(min-width: 900px) 420px, 82vw" width="1200" height="1600" loading="lazy" alt="Dürüm in Alufolie, halbiert, daneben eine Apfelschorle" style="--pos:40% 70%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-wrap"/></svg>
+              <span class="card__tag">Gerollt</span>
+              <div class="card__body">
+                <span class="card__price">9,00 €</span>
+                <h3 class="card__title">Dürüm</h3>
+                <p>Döner-Fleisch, Salat und Soße im dünnen Fladen gerollt – in Alufolie, perfekt für unterwegs.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-lahmacun" data-cursor="Zur Karte" aria-label="Lahmacun in der Speisekarte ansehen"></a>
+              <div class="card__media card__media--placeholder">
+                <svg class="card__placeholder-ico" aria-hidden="true"><use href="#l-lahmacun"/></svg>
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-lahmacun"/></svg>
+              <span class="card__tag">Türkischer Klassiker</span>
+              <div class="card__body">
+                <span class="fehlt card__fehlt">[Foto fehlt – bitte liefern]</span>
+                <span class="card__price">7,50 €</span>
+                <h3 class="card__title">Lahmacun</h3>
+                <p>Mit Salat und Soße. Als Spezial auch mit Drehspieß – siehe Speisekarte.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-falafel" data-cursor="Zur Karte" aria-label="Falafel in der Speisekarte ansehen"></a>
+              <div class="card__media card__media--placeholder">
+                <svg class="card__placeholder-ico" aria-hidden="true"><use href="#l-falafel"/></svg>
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-falafel"/></svg>
+              <span class="card__tag">Vegetarisch</span>
+              <div class="card__body">
+                <span class="fehlt card__fehlt">[Foto fehlt – bitte liefern]</span>
+                <span class="card__price">8,00 €</span>
+                <h3 class="card__title">Falafel</h3>
+                <p>Im Fladenbrot mit Salat und Soße. Auch im Rollteig oder als Teller.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html?suche=vegetarisch" data-cursor="Zur Karte" aria-label="Vegetarisch in der Speisekarte ansehen"></a>
+              <div class="card__media card__media--placeholder">
+                <svg class="card__placeholder-ico" aria-hidden="true"><use href="#l-blatt"/></svg>
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-blatt"/></svg>
+              <span class="card__tag">Ohne Fleisch</span>
+              <div class="card__body">
+                <span class="fehlt card__fehlt">[Foto fehlt – bitte liefern]</span>
+                <span class="card__price">ab 8,00 €</span>
+                <h3 class="card__title">Vegetarisch</h3>
+                <p>Vegetarisches Fladenbrot, Halloumi mit gegrilltem Käse oder Dürüm vegetarisch – mit Salat und Soße.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-box" data-cursor="Zur Karte" aria-label="Döner Box in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/doener-box-sm.webp" srcset="assets/img/doener-box-sm.webp 640w, assets/img/doener-box.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Box mit Fleisch, Mais, Soße und Chiliflocken" style="--pos:30% 45%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-box"/></svg>
+              <span class="card__tag">To go</span>
+              <div class="card__body">
+                <span class="card__price">8,00 €</span>
+                <h3 class="card__title">Döner Box</h3>
+                <p>Drehspieß mit Pommes in der Box – perfekt zum Mitnehmen.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-teller" data-cursor="Zur Karte" aria-label="Döner Teller in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/doener-teller-sm.webp" srcset="assets/img/doener-teller-sm.webp 640w, assets/img/doener-teller.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Teller mit Fleisch, Kartoffeln, Salat, Mais und Soßen" style="--pos:50% 68%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-teller"/></svg>
+              <span class="card__tag">Richtig satt</span>
+              <div class="card__body">
+                <span class="card__price">13,00 €</span>
+                <h3 class="card__title">Döner Teller</h3>
+                <p>Drehspieß auf dem Teller – wahlweise mit Reis, Pommes oder Salat und Soße.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+
+            <article class="card" data-tilt>
+              <a class="card__link" href="speisekarte.html#kat-pizza" data-cursor="Zur Karte" aria-label="Döner Pizza in der Speisekarte ansehen"></a>
+              <div class="card__media">
+                <img src="assets/img/doener-pizza-crop-sm.webp" srcset="assets/img/doener-pizza-crop-sm.webp 640w, assets/img/doener-pizza-crop.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="1280" loading="lazy" alt="Döner Pizza mit Käse und scharfer Soße, daneben eine Dose Orangenlimo" style="--pos:50% 70%">
+              </div>
+              <svg class="card__ico" aria-hidden="true"><use href="#l-pizza"/></svg>
+              <span class="card__tag">Pizza trifft Döner</span>
+              <div class="card__body">
+                <span class="card__price">10,50 €</span>
+                <h3 class="card__title">Döner Pizza</h3>
+                <p>Aus dem Steinofen: Tomatensoße, Käse und Drehspieß – mit scharfer Soße on top.</p>
+                <p class="allergens"><span class="allergens__label">Allergene</span> <abbr class="allergen" title="Glutenhaltiges Getreide">A<span class="sr-only"> (Glutenhaltiges Getreide)</span></abbr> <abbr class="allergen" title="Eier">C<span class="sr-only"> (Eier)</span></abbr> <abbr class="allergen" title="Soja">F<span class="sr-only"> (Soja)</span></abbr> <abbr class="allergen" title="Milch und Laktose">G<span class="sr-only"> (Milch und Laktose)</span></abbr> <abbr class="allergen" title="Senf">J<span class="sr-only"> (Senf)</span></abbr></p>
+                <span class="card__more">Zur Speisekarte →</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER UNS -->
+    <section class="about" id="ueber-uns" aria-labelledby="about-title">
+      <div class="about__inner">
+        <div class="about__intro">
+          <p class="eyebrow" data-reveal>Über uns</p>
+          <h2 class="section-title" id="about-title" data-reveal>Frisch. <em>Hausgemacht.</em> Jeden Tag.</h2>
+          <p class="about__text" data-reveal>Hasans Kebab in Bad Schussenried steht für Döner, Dürüm, Lahmacun und Pizza. Dabei setzen wir auf frische Zutaten, machen unsere Soßen selbst und bereiten jeden Tag frisch zu.</p>
+        </div>
+        <ul class="about__points">
+          <li data-reveal style="--d:0">
+            <svg class="about__ico" aria-hidden="true"><use href="#l-blatt"/></svg>
+            <h3>Frische Zutaten</h3>
+            <p>Wir arbeiten mit frischen Zutaten – das schmeckt man.</p>
+          </li>
+          <li data-reveal style="--d:1">
+            <svg class="about__ico" aria-hidden="true"><use href="#l-tropfen"/></svg>
+            <h3>Selbst gemachte Soßen</h3>
+            <p>Unsere Soßen machen wir selbst.</p>
+          </li>
+          <li data-reveal style="--d:2">
+            <svg class="about__ico" aria-hidden="true"><use href="#l-spiess"/></svg>
+            <h3>Täglich frisch zubereitet</h3>
+            <p>Wir bereiten jeden Tag frisch zu.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- POM DÖNER BAUKASTEN -->
     <section class="build" id="pom-doener" aria-labelledby="build-title">
@@ -419,120 +642,6 @@
             </li>
           </ol>
           <div class="build__meter" aria-hidden="true"><span></span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENÜ (horizontal) -->
-    <section class="menu" id="menu" aria-labelledby="menu-title">
-      <div class="menu__sticky">
-        <header class="menu__head">
-          <div>
-            <p class="eyebrow">Unsere Klassiker</p>
-            <h2 class="section-title" id="menu-title">Alles vom <em>Spieß.</em></h2>
-          </div>
-          <div class="menu__progress" aria-hidden="true">
-            <svg class="menu__dot is-active"><use href="#l-pommes"/></svg>
-            <svg class="menu__dot"><use href="#l-spiess"/></svg>
-            <svg class="menu__dot"><use href="#l-wrap"/></svg>
-            <svg class="menu__dot"><use href="#l-box"/></svg>
-            <svg class="menu__dot"><use href="#l-teller"/></svg>
-            <svg class="menu__dot"><use href="#l-pizza"/></svg>
-          </div>
-        </header>
-
-        <div class="menu__viewport">
-          <div class="menu__track">
-            <article class="card card--star" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-doener" data-cursor="Zur Karte" aria-label="Pom Döner in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/pom-doener-sm.webp" srcset="assets/img/pom-doener-sm.webp 640w, assets/img/pom-doener.webp 1200w" sizes="(min-width: 900px) 520px, 82vw" width="1200" height="1600" loading="lazy" alt="Pom Döner mit Pommes auf einem verzierten Metallteller" style="--pos:50% 55%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-pommes"/></svg>
-              <span class="card__tag"><svg><use href="#i-spark"/></svg> Star des Hauses</span>
-              <div class="card__body">
-                <span class="card__price">9,00 €</span>
-                <h3 class="card__title">Pom Döner</h3>
-                <p>Döner im Fladenbrot mit Salat, Soße und Schafskäse – und die knusprigen Pommes stecken direkt mit drin.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-
-            <article class="card" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-doener" data-cursor="Zur Karte" aria-label="Döner in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/doener-kebab-sm.webp" srcset="assets/img/doener-kebab-sm.webp 640w, assets/img/doener-kebab.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner im Fladenbrot mit Mais, Schafskäse, Salat und Soßen, daneben ein Ayran" style="--pos:70% 62%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-spiess"/></svg>
-              <span class="card__tag">Klassiker</span>
-              <div class="card__body">
-                <span class="card__price">ab 8,00 €</span>
-                <h3 class="card__title">Döner</h3>
-                <p>Getoastetes Fladenbrot, saftiges Fleisch vom Spieß, Salat, Mais, Schafskäse und Soßen.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-
-            <article class="card" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-duerum" data-cursor="Zur Karte" aria-label="Dürüm in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/duerum-sm.webp" srcset="assets/img/duerum-sm.webp 640w, assets/img/duerum.webp 1200w" sizes="(min-width: 900px) 420px, 82vw" width="1200" height="1600" loading="lazy" alt="Dürüm in Alufolie, halbiert, daneben eine Apfelschorle" style="--pos:40% 70%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-wrap"/></svg>
-              <span class="card__tag">Gerollt</span>
-              <div class="card__body">
-                <span class="card__price">9,00 €</span>
-                <h3 class="card__title">Dürüm</h3>
-                <p>Döner-Fleisch, Salat und Soße im dünnen Fladen gerollt – in Alufolie, perfekt für unterwegs.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-
-            <article class="card" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-box" data-cursor="Zur Karte" aria-label="Döner Box in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/doener-box-sm.webp" srcset="assets/img/doener-box-sm.webp 640w, assets/img/doener-box.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Box mit Fleisch, Mais, Soße und Chiliflocken" style="--pos:30% 45%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-box"/></svg>
-              <span class="card__tag">To go</span>
-              <div class="card__body">
-                <span class="card__price">8,00 €</span>
-                <h3 class="card__title">Döner Box</h3>
-                <p>Drehspieß mit Pommes in der Box – perfekt zum Mitnehmen.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-
-            <article class="card" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-teller" data-cursor="Zur Karte" aria-label="Döner Teller in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/doener-teller-sm.webp" srcset="assets/img/doener-teller-sm.webp 640w, assets/img/doener-teller.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="2000" loading="lazy" alt="Döner Teller mit Fleisch, Kartoffeln, Salat, Mais und Soßen" style="--pos:50% 68%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-teller"/></svg>
-              <span class="card__tag">Richtig satt</span>
-              <div class="card__body">
-                <span class="card__price">13,00 €</span>
-                <h3 class="card__title">Döner Teller</h3>
-                <p>Drehspieß auf dem Teller – wahlweise mit Reis, Pommes oder Salat und Soße.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-
-            <article class="card" data-tilt>
-              <a class="card__link" href="speisekarte.html#kat-pizza" data-cursor="Zur Karte" aria-label="Döner Pizza in der Speisekarte ansehen"></a>
-              <div class="card__media">
-                <img src="assets/img/doener-pizza-crop-sm.webp" srcset="assets/img/doener-pizza-crop-sm.webp 640w, assets/img/doener-pizza-crop.webp 1125w" sizes="(min-width: 900px) 420px, 82vw" width="1125" height="1280" loading="lazy" alt="Döner Pizza mit Käse und scharfer Soße, daneben eine Dose Orangenlimo" style="--pos:50% 70%">
-              </div>
-              <svg class="card__ico" aria-hidden="true"><use href="#l-pizza"/></svg>
-              <span class="card__tag">Pizza trifft Döner</span>
-              <div class="card__body">
-                <span class="card__price">10,50 €</span>
-                <h3 class="card__title">Döner Pizza</h3>
-                <p>Aus dem Steinofen: Tomatensoße, Käse und Drehspieß – mit scharfer Soße on top.</p>
-                <span class="card__more">Zur Speisekarte →</span>
-              </div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -738,6 +847,32 @@
       </div>
     </section>
 
+    <!-- ÖFFNUNGSZEITEN -->
+    <section class="hours" id="oeffnungszeiten" aria-labelledby="hours-title">
+      <div class="hours__inner">
+        <div class="hours__intro">
+          <p class="eyebrow" data-reveal>Öffnungszeiten</p>
+          <h2 class="section-title" id="hours-title" data-reveal>Täglich <em>11 bis 22 Uhr.</em></h2>
+          <p class="open-status open-status--big" data-open-status data-reveal>
+            <span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span>
+          </p>
+          <p class="hours__note" data-reveal>Die Öffnungszeiten können abweichen – im Zweifel kurz anrufen: <a href="tel:+497583926440">07583 926440</a></p>
+        </div>
+        <table class="hours__table" data-reveal>
+          <caption class="sr-only">Öffnungszeiten von Montag bis Sonntag</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Montag</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="2"><th scope="row">Dienstag</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="3"><th scope="row">Mittwoch</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="4"><th scope="row">Donnerstag</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="5"><th scope="row">Freitag</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="6"><th scope="row">Samstag</th><td>11:00 – 22:00 Uhr</td></tr>
+            <tr data-day="7"><th scope="row">Sonntag</th><td>11:00 – 22:00 Uhr</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- BESUCH -->
     <section class="visit" id="besuch" aria-labelledby="visit-title">
       <div class="visit__grill" aria-hidden="true">
@@ -746,22 +881,14 @@
       </div>
 
       <div class="visit__content">
-        <p class="eyebrow" data-reveal>Besuch uns</p>
+        <p class="eyebrow" data-reveal>Standort &amp; Kontakt</p>
         <h2 class="visit__title" id="visit-title" data-reveal>Komm vorbei.<br><span>Hunger mitbringen.</span></h2>
-        <p class="open-status visit__status" data-open-status data-reveal>
-          <span class="open-status__dot"></span><span data-open-text>Täglich 11:00–22:00 Uhr</span>
-        </p>
-
         <div class="visit__cards">
           <div class="info" data-reveal style="--d:0">
             <h3>Adresse</h3>
             <address>Zeppelinstraße 8<br>88427 Bad Schussenried</address>
           </div>
           <div class="info" data-reveal style="--d:1">
-            <h3>Öffnungszeiten</h3>
-            <p>Montag – Sonntag<br><strong>11:00 – 22:00 Uhr</strong></p>
-          </div>
-          <div class="info" data-reveal style="--d:2">
             <h3>Telefon</h3>
             <p><a href="tel:+497583926440">07583 926440</a></p>
           </div>
@@ -776,8 +903,44 @@
 
         <div class="visit__actions" data-reveal>
           <a class="btn btn--primary btn--big magnetic" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B6ner-Pizza-Kebab+Hasans%2C+Zeppelinstra%C3%9Fe+8%2C+88427+Bad+Schussenried" target="_blank" rel="noopener">Route planen ↗</a>
-          <a class="btn btn--ghost btn--big magnetic" href="tel:+497583926440">Anrufen</a>
+          <a class="btn btn--ghost btn--big magnetic" href="tel:+497583926440"><svg class="btn__ico" aria-hidden="true"><use href="#l-phone"/></svg>Anrufen</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ALLERGENE -->
+    <section class="allergy" id="allergene" aria-labelledby="allergy-title">
+      <div class="allergy__inner">
+        <div class="allergy__intro" data-reveal>
+          <p class="eyebrow">Allergenhinweise</p>
+          <h2 class="section-title" id="allergy-title">Gut zu <em>wissen.</em></h2>
+          <p>Bei jedem Gericht kennzeichnen wir die enthaltenen Allergene mit Buchstaben. Die Tabelle zeigt, wofür sie stehen.</p>
+          <div class="allergy__notice" role="note">
+            <svg class="allergy__ico" aria-hidden="true"><use href="#l-hinweis"/></svg>
+            <p><strong>Bitte sprechen Sie unser Team bei Allergien oder Unverträglichkeiten vor der Bestellung an.</strong> Trotz sorgfältiger Zubereitung können Kreuzkontaminationen nicht vollständig ausgeschlossen werden.</p>
+          </div>
+          <p class="allergy__additives">Die <strong>Zahlen</strong> hinter den Gerichten in der Speisekarte stehen für Zusatzstoffe. <span class="fehlt">[Erklärung der Zusatzstoff-Nummern 2–9 fehlt – bitte ergänzen]</span></p>
+        </div>
+        <table class="allergy__table" data-reveal>
+          <caption>Allergen-Legende</caption>
+          <thead><tr><th scope="col">Kürzel</th><th scope="col">Allergen</th></tr></thead>
+          <tbody>
+              <tr><th scope="row"><span class="allergen">A</span></th><td>Glutenhaltiges Getreide</td></tr>
+              <tr><th scope="row"><span class="allergen">B</span></th><td>Krebstiere</td></tr>
+              <tr><th scope="row"><span class="allergen">C</span></th><td>Eier</td></tr>
+              <tr><th scope="row"><span class="allergen">D</span></th><td>Fisch</td></tr>
+              <tr><th scope="row"><span class="allergen">E</span></th><td>Erdnüsse</td></tr>
+              <tr><th scope="row"><span class="allergen">F</span></th><td>Soja</td></tr>
+              <tr><th scope="row"><span class="allergen">G</span></th><td>Milch und Laktose</td></tr>
+              <tr><th scope="row"><span class="allergen">H</span></th><td>Schalenfrüchte</td></tr>
+              <tr><th scope="row"><span class="allergen">I</span></th><td>Sellerie</td></tr>
+              <tr><th scope="row"><span class="allergen">J</span></th><td>Senf</td></tr>
+              <tr><th scope="row"><span class="allergen">K</span></th><td>Sesam</td></tr>
+              <tr><th scope="row"><span class="allergen">L</span></th><td>Schwefeldioxid und Sulfite</td></tr>
+              <tr><th scope="row"><span class="allergen">M</span></th><td>Lupinen</td></tr>
+              <tr><th scope="row"><span class="allergen">N</span></th><td>Weichtiere</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
@@ -801,7 +964,7 @@
     <button class="lightbox__btn lightbox__next" type="button" aria-label="Nächstes Bild">→</button>
   </dialog>
 
-  <script src="assets/js/common.js?v=7" defer></script>
-  <script src="assets/js/main.js?v=7" defer></script>
+  <script src="assets/js/common.js?v=8" defer></script>
+  <script src="assets/js/main.js?v=8" defer></script>
 </body>
 </html>
